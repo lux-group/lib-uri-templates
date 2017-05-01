@@ -1,7 +1,7 @@
 const template = require('url-template');
 
 const definitions = {
-  '1.0': {
+  1: {
     properties: '/api/properties{?id_salesforce_external,limit,page}',
     property: '/api/properties/{id}',
     roomTypes: '/api/properties/{property_id}/room-types',
