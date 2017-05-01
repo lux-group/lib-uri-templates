@@ -11,8 +11,8 @@ describe('#get', function() {
   });
 
   describe('#version', function() {
-    it('should return the source', function() {
-      assert.equal(template.source, '/api/properties{?id_salesforce_external,limit,page}');
+    it('should return the rfc6570', function() {
+      assert.equal(template.rfc6570, '/api/properties{?id_salesforce_external,limit,page}');
     });
   });
 
@@ -33,13 +33,13 @@ describe('#mock', function() {
   });
 
   describe('#version', function() {
-    it('should return the source', function() {
-      assert.equal(template.source, '/api/properties{?id_salesforce_external,limit,page}');
+    it('should return the rfc6570', function() {
+      assert.equal(template.rfc6570, '/api/properties{?id_salesforce_external,limit,page}');
     });
   });
 
   describe('#expand', function() {
-    it('should return the source', function() {
+    it('should return the rfc6570', function() {
       assert.equal(typeof template.expand, 'function');
     });
   });

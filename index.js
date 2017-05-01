@@ -9,23 +9,23 @@ const definitions = {
   },
 };
 
-function build(version, source) {
-  const builder = template.parse(source);
+function build(version, rfc6570) {
+  const builder = template.parse(rfc6570);
 
   return {
     version,
-    source,
+    rfc6570,
     expand: query => builder.expand(query),
   }
 }
 
-function get(version, resource) {
-  const source = definitions[version][resource];
-  return build(version, source)
+function get(version, rerfc6570) {
+  const rfc6570 = definitions[version][rerfc6570];
+  return build(version, rfc6570)
 }
 
-function mock(version, source) {
-  return build(version, source)
+function mock(version, rfc6570) {
+  return build(version, rfc6570)
 }
 
 module.exports = {
