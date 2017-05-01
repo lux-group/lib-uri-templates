@@ -1,0 +1,16 @@
+{
+  "name": "lib-uri-templates",
+  "version": "1.0.0",
+  "description": "All our routes in a repo for profit",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "url-template": "^2.0.8"
+  },
+  "devDependencies": {
+    "mocha": "^3.3.0"
+  }
+}
