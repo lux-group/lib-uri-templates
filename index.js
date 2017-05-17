@@ -23,6 +23,8 @@ const definitions = {
     offer_schedule: '/api/offers/{offer_id}/schedules/{id}',
     offer_image: '/api/offers/{offer_id}/images/{id}',
     offer_images: '/api/offers/{offer_id}/images',
+
+    voucher_status: '/api/vouchers/public-status/{vendor_id}/{offer_id}',
   },
 };
 
