@@ -1,6 +1,6 @@
-const template = require('url-template');
+var template = require('url-template');
 
-const definitions = {
+var definitions = {
   1: {
     properties: '/api/properties{?id_salesforce_external,limit,page}',
     property: '/api/properties/{id}',
@@ -29,17 +29,19 @@ const definitions = {
 };
 
 function build(version, rfc6570) {
-  const builder = template.parse(rfc6570);
+  var builder = template.parse(rfc6570);
 
   return {
-    version,
-    rfc6570,
-    expand: query => builder.expand(query),
+    version: version,
+    rfc6570: rfc6570,
+    expand: function (query) {
+      return builder.expand(query);
+    },
   }
 }
 
 function get(version, name) {
-  const rfc6570 = definitions[version][name];
+  var rfc6570 = definitions[version][name];
   return build(version, rfc6570);
 }
 
@@ -48,7 +50,7 @@ function mock(version, rfc6570) {
 }
 
 function list(version) {
-  return Object.keys(definitions[version]).reduce((acc, key) => {
+  return Object.keys(definitions[version]).reduce(function (acc, key) {
     acc[key] = {
       href: get(version, key).rfc6570,
       templated: true,
@@ -58,7 +60,7 @@ function list(version) {
 }
 
 module.exports = {
-  get,
-  mock,
-	list,
+  get: get,
+  mock: mock,
+  list: list,
 };
