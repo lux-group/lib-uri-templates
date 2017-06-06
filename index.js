@@ -13,6 +13,8 @@ var definitions = {
     tour: '/api/tours/{id}',
     tour_options: '/api/tours/{tour_id}/tour-options',
     tour_option: '/api/tours/{tour_id}/tour-options/{id}',
+    tour_legs: '/api/tours/{tour_id}/tour-legs',
+    tour_leg: '/api/tours/{tour_id}/tour-legs/{id}',
 
     public_offers: '/api/public-offers{?page,limit,platform,region}',
     public_offer: '/api/public-offers/{id}{?platform,region}',
