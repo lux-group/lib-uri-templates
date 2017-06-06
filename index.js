@@ -6,6 +6,15 @@ var definitions = {
     property: '/api/properties/{id}',
     room_types: '/api/properties/{property_id}/room-types',
     room_type: '/api/properties/{property_id}/room-types/{id}',
+    room_type_availability: '/api/properties/{property_id}/room-types/{id}/availability',
+    room_type_enquiry: '/api/properties/{property_id}/room-types/{id}/enquiry{?months,offset,nights}',
+
+    tours: '/api/tours{?id_salesforce_external,limit,page}',
+    tour: '/api/tours/{id}',
+    tour_options: '/api/tours/{tour_id}/tour-options',
+    tour_option: '/api/tours/{tour_id}/tour-options/{id}',
+    tour_legs: '/api/tours/{tour_id}/tour-legs',
+    tour_leg: '/api/tours/{tour_id}/tour-legs/{id}',
 
     public_offers: '/api/public-offers{?page,limit,platform,region}',
     public_offer: '/api/public-offers/{id}{?platform,region}',
