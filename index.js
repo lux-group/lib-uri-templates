@@ -18,14 +18,11 @@ var definitions = {
 
     public_offers: '/api/public-offers{?page,limit,platform,region}',
     public_offer: '/api/public-offers/{id}{?platform,region}',
-    public_offer_package: '/api/public-offers/{offer_id}/packages/{id}',
-    public_offer_schedule: '/api/public-offers/{offer_id}/schedules/{id}',
-    public_offer_image: '/api/public-offers/{offer_id}/images/{id}',
 
     vendor_offers: '/api/vendor-offers{?email}',
 
-    offers: '/api/offers{?page,limit,platform,region}',
-    offer: '/api/offers/{id}{?platform,region}',
+    offers: '/api/offers{?page,limit,platform,region,filter}',
+    offer: '/api/offers/{id}{?platform,region,filter}',
     offer_packages: '/api/offers/{offer_id}/packages',
     offer_package: '/api/offers/{offer_id}/packages/{id}',
     offer_schedules: '/api/offers/{offer_id}/schedules',
