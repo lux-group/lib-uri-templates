@@ -7,7 +7,7 @@ var definitions = {
     room_types: '/api/properties/{property_id}/room-types',
     room_type: '/api/properties/{property_id}/room-types/{id}',
     room_type_availability: '/api/properties/{property_id}/room-types/{id}/availability',
-    room_type_enquiry: '/api/properties/{property_id}/room-types/{id}/enquiry{?months,offset,nights}',
+    hotel_enquiry: '/api/properties/{property_id}/room-types/{id}/enquiry{?months,offset,nights,currency}',
 
     tours: '/api/tours{?id_salesforce_external,limit,page}',
     tour: '/api/tours/{id}',
