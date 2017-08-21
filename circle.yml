@@ -12,9 +12,3 @@ dependencies:
 test:
   override:
     - yarn test
-
-deployment:
-  staging:
-    branch: master
-    heroku:
-      appname: test-le-svc-discovery
