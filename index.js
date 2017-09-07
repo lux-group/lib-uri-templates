@@ -9,6 +9,8 @@ var definitions = {
     room_type_availability: '/api/properties/{property_id}/room-types/{id}/availability',
     hotel_enquiry: '/api/properties/{property_id}/room-types/{id}/enquiry{?months,offset,nights,currency,timezone_offset}',
 
+    amenities: '/api/amenities',
+
     tours: '/api/tours{?id_salesforce_external,limit,page}',
     tour: '/api/tours/{id}',
     tour_options: '/api/tours/{tour_id}/tour-options',
