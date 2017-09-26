@@ -19,12 +19,12 @@ var definitions = {
     tour_leg: '/api/tours/{tour_id}/tour-legs/{id}',
     tour_enquiry: '/api/tours/{tour_id}/tour-options/{id}/enquiry',
 
-    public_offers: '/api/public-offers{?page,limit,platform,region}',
+    public_offers: '/api/public-offers{?page,limit,platform,region}{&type*}',
     public_offer: '/api/public-offers/{id}{?platform,region}',
 
     vendor_offers: '/api/vendor-offers{?email}',
 
-    offers: '/api/offers{?page,limit,platform,region,filter}',
+    offers: '/api/offers{?page,limit,platform,region,filter}{&type*}',
     offer: '/api/offers/{id}{?platform,region,filter}',
     offer_packages: '/api/offers/{offer_id}/packages',
     offer_package: '/api/offers/{offer_id}/packages/{id}',
