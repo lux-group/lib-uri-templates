@@ -8,6 +8,7 @@ var definitions = {
     room_type: '/api/properties/{property_id}/room-types/{id}',
     room_type_availability: '/api/properties/{property_id}/room-types/{id}/availability',
     hotel_enquiry: '/api/properties/{property_id}/room-types/{id}/enquiry{?months,offset,nights,currency,timezone_offset}',
+    hotel_reservation: '/api/properties/{property_id}/room-types/{room_type_id}/reservations/{id}',
 
     amenities: '/api/amenities',
 
@@ -18,6 +19,7 @@ var definitions = {
     tour_legs: '/api/tours/{tour_id}/tour-legs',
     tour_leg: '/api/tours/{tour_id}/tour-legs/{id}',
     tour_enquiry: '/api/tours/{tour_id}/tour-options/{id}/enquiry',
+    tour_reservation: '/api/tours/{tour_id}/tour-options/{tour_option_id}/reservations/{id}',
 
     public_offers: '/api/public-offers{?page,limit,platform,region}{&type*}',
     public_offer: '/api/public-offers/{id}{?platform,region}',
@@ -34,6 +36,11 @@ var definitions = {
     offer_images: '/api/offers/{offer_id}/images',
 
     voucher_status: '/api/vouchers/public-status/{vendor_id}/{offer_id}',
+
+    orders: '/api/orders{?page,per_page,order_by,order_direction,customer_id,vendor_email,updated_since}',
+    order: '/api/orders/{id}',
+    payments: '/api/payments{?id_orders}',
+    credits: '/api/credits{?id_member,currency}',
   },
 };
 
