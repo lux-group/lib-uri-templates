@@ -41,6 +41,12 @@ var definitions = {
     order: '/api/orders/{id}',
     payments: '/api/payments{?id_orders}',
     credits: '/api/credits{?id_member,currency}',
+
+    regions: '/regions',
+    legal: '/legal',
+    privacy_policy: '/legal/privacy-policy',
+    refund_policy: '/legal/refund-policy',
+    terms_and_conditions: '/legal/terms-and-conditions',
   },
 };
 
