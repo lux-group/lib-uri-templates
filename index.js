@@ -2,6 +2,8 @@ var template = require('url-template');
 
 var definitions = {
   1: {
+    root: '/',
+
     properties: '/api/properties{?id_salesforce_external,limit,page}',
     property: '/api/properties/{id}',
     room_types: '/api/properties/{property_id}/room-types',
