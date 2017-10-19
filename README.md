@@ -23,3 +23,14 @@ template.version                              // 1
 template.rfc6570                              // '/api/properties{?id_salesforce_external,limit,page}'
 template.expand({id_salesforce_external: 1})  // '/api/properties?id_salesforce_external=1
 ```
+
+## Release
+
+Use `npm` to patch, minor or whatever version:
+
+```
+npm version patch -m "release version %s"
+git push && git push --tags
+```
+
+https://docs.npmjs.com/cli/version
