@@ -20,7 +20,7 @@ var definitions = {
     tour_option: '/api/tours/{tour_id}/tour-options/{id}',
     tour_legs: '/api/tours/{tour_id}/tour-legs',
     tour_leg: '/api/tours/{tour_id}/tour-legs/{id}',
-    tour_enquiry: '/api/tours/{tour_id}/tour-options/{id}/enquiry',
+    tour_enquiry: '/api/tours/{tour_id}/tour-options/{id}/enquiry{?days,timezone_offset}',
     tour_reservation: '/api/tours/{tour_id}/tour-options/{tour_option_id}/reservations/{id}',
 
     public_offers: '/api/public-offers{?page,limit,platform,region}{&type*}',
