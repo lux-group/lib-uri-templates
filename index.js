@@ -39,7 +39,7 @@ var definitions = {
 
     voucher_status: '/api/vouchers/public-status/{vendor_id}/{offer_id}',
 
-    orders: '/api/orders{?page,per_page,order_by,order_direction,customer_id,vendor_email,updated_since}',
+    orders: '/api/orders{?page,per_page,order_by,order_direction,customer_id,vendor_id,updated_since}',
     order: '/api/orders/{id}',
     payments: '/api/payments{?id_orders}',
     credits: '/api/credits{?id_member,currency}',
