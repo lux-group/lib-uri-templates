@@ -37,6 +37,14 @@ var definitions = {
     offer_image: '/api/offers/{offer_id}/images/{id}',
     offer_images: '/api/offers/{offer_id}/images',
 
+    ee_public_offers: '/api/ee/public-offers{?page,limit,platform,region}{&type*}',
+    ee_public_offer: '/api/ee/public-offers/{id}{?platform,region}',
+
+    ee_offers: '/api/ee/offers{?page,limit,platform,region,filter}{&type*}',
+    ee_offer: '/api/ee/offers/{id}{?platform,region,filter}',
+    ee_offer_packages: '/api/ee/offers/{offer_id}/packages',
+    ee_offer_package: '/api/ee/offers/{offer_id}/packages/{id}',
+
     voucher_status: '/api/vouchers/public-status/{vendor_id}/{offer_id}',
 
     orders: '/api/orders{?page,per_page,order_by,order_direction,customer_id,vendor_id,utm_source,le_label,le_attribution,updated_since}',
