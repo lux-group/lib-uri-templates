@@ -52,6 +52,9 @@ var definitions = {
     payments: '/api/payments{?id_orders}',
     credits: '/api/credits{?id_member,currency}',
 
+    ee_orders: '/api/ee/orders{?page,per_page,order_by,order_direction,customer_id,vendor_id,utm_source,le_label,le_attribution,updated_since}',
+    ee_order: '/api/ee/orders/{id}',
+
     regions: '/regions',
     legal: '/legal',
     privacy_policy: '/legal/privacy-policy',
