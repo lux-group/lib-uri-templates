@@ -37,14 +37,17 @@ var definitions = {
     offer_image: '/api/offers/{offer_id}/images/{id}',
     offer_images: '/api/offers/{offer_id}/images',
 
-    ee_public_offers: '/api/ee/public-offers{?page,limit,platform,region}{&type*}',
-    ee_public_offer: '/api/ee/public-offers/{id}{?platform,region}',
+    ee_public_offers: '/api/ee/offers-public{?page,limit,platform,region}{&type*}',
+    ee_public_offer: '/api/ee/offers-public/{id}{?platform,region}',
+    ee_vendor_offers: '/api/ee/vendor-offers{?email}',
     
     ee_offers: '/api/ee/offers{?page,limit,platform,region,filter}{&type*}',
     ee_offer: '/api/ee/offers/{id}{?platform,region,filter}',
     ee_offer_packages: '/api/ee/offers/{offer_id}/packages',
     ee_offer_package: '/api/ee/offers/{offer_id}/packages/{id}',
     ee_redemption_location: '/api/ee/redemption-location/{id}',
+    ee_offer_image: '/api/ee/offers/{offer_id}/images/{id}',
+    ee_offer_images: '/api/ee/offers/{offer_id}/images',
 
     voucher_status: '/api/vouchers/public-status/{vendor_id}/{offer_id}',
 
