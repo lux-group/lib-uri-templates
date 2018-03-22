@@ -23,16 +23,16 @@ var definitions = {
     tour_enquiry: '/api/tours/{tour_id}/tour-options/{id}/enquiry{?days,timezone_offset}',
     tour_reservation: '/api/tours/{tour_id}/tour-options/{tour_option_id}/reservations/{id}',
 
-    public_offers: '/api/public-offers{?page,limit,platform,region}{&type*}',
-    public_offer: '/api/public-offers/{id}{?platform,region}',
+    public_offers: '/api/public-offers{?page,limit,platform,region,brand}{&type*}',
+    public_offer: '/api/public-offers/{id}{?platform,region,brand}',
 
     vendor_offers: '/api/vendor-offers{?email}',
 
-    offers: '/api/offers{?page,limit,platform,region,filter}{&type*}',
-    offer: '/api/offers/{id}{?platform,region,filter}',
+    offers: '/api/offers{?page,limit,platform,region,filter,brand}{&type*}',
+    offer: '/api/offers/{id}{?platform,region,filter,brand}',
     offer_packages: '/api/offers/{offer_id}/packages',
     offer_package: '/api/offers/{offer_id}/packages/{id}',
-    offer_schedules: '/api/offers/{offer_id}/schedules',
+    offer_schedules: '/api/offers/{offer_id}/schedules{?brand}',
     offer_schedule: '/api/offers/{offer_id}/schedules/{id}',
     offer_image: '/api/offers/{offer_id}/images/{id}',
     offer_images: '/api/offers/{offer_id}/images',
