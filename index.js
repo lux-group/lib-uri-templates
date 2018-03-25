@@ -48,6 +48,10 @@ var definitions = {
     ee_redemption_location: '/api/ee/redemption-location/{id}',
     ee_offer_image: '/api/ee/offers/{offer_id}/images/{id}',
     ee_offer_images: '/api/ee/offers/{offer_id}/images',
+    ee_tokens: '/api/ee/tokens',
+    ee_token: '/api/ee/tokens/{id}',
+    ee_offers_feed: '/api/ee/offers-feed{?consumer,token,brand}',
+
 
     voucher_status: '/api/vouchers/public-status/{vendor_id}/{offer_id}',
 
