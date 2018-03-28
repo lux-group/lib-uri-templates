@@ -40,6 +40,7 @@ var definitions = {
     ee_public_offers: '/api/ee/offers-public{?page,limit,platform,region}{&type*}',
     ee_public_offer: '/api/ee/offers-public/{id}{?platform,region}',
     ee_vendor_offers: '/api/ee/vendor-offers{?email}',
+    ee_public_category_list: '/api/ee/offers-public/category-list{?brand}',
     
     ee_offers: '/api/ee/offers{?page,limit,platform,region,filter}{&type*}',
     ee_offer: '/api/ee/offers/{id}{?platform,region,filter}',
