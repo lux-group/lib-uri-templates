@@ -1,6 +1,6 @@
 {
   "name": "lib-uri-templates",
-  "version": "0.2.20",
+  "version": "0.2.21",
   "description": "All our routes in a repo for profit",
   "main": "index.js",
   "scripts": {
