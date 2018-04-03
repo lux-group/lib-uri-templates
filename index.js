@@ -26,6 +26,7 @@ var definitions = {
     public_offers: '/api/public-offers{?page,limit,platform,region,brand}{&type*}',
     public_offer: '/api/public-offers/{id}{?platform,region,brand}',
 
+    vendor: '/api/vendor/{id}',
     vendor_offers: '/api/vendor-offers{?email}',
 
     offers: '/api/offers{?page,limit,platform,region,filter,brand}{&type*}',
