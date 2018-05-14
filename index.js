@@ -52,6 +52,8 @@ var definitions = {
     ee_offer_images: '/api/ee/offers/{offer_id}/images',
     ee_offers_feed: '/api/ee/offers-feed{?consumer,token,brand}',
     ee_offers_regions: '/api/ee/offers-regions',
+    ee_hero_assignments: '/api/ee/hero_assignments{?platform}',
+    ee_hero_assignment: '/api/ee/hero_assignments/{region}{?platform}',
 
 
     voucher_status: '/api/vouchers/public-status/{vendor_id}/{offer_id}',
