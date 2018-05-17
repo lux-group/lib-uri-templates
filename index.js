@@ -42,7 +42,7 @@ var definitions = {
     ee_public_offer: '/api/ee/offers-public/{id}{?platform,region}',
     ee_vendor_offers: '/api/ee/vendor-offers{?email}',
     ee_public_category_list: '/api/ee/offers-public/category-list{?brand}',
-    
+
     ee_offers: '/api/ee/offers{?page,limit,platform,region,filter}{&type*}',
     ee_offer: '/api/ee/offers/{id}{?platform,region,filter}',
     ee_offer_packages: '/api/ee/offers/{offer_id}/packages',
@@ -54,7 +54,9 @@ var definitions = {
     ee_offers_regions: '/api/ee/offers-regions',
     ee_hero_assignments: '/api/ee/hero_assignments{?platform}',
     ee_hero_assignment: '/api/ee/hero_assignments/{region}{?platform}',
-
+    ee_inventory_voucher: '/api/ee/vouchers/{inventory_id}/{voucher_code}',
+    ee_inventory: '/api/ee/inventories/{inventory_id}',
+    ee_inventory_voucher_status: '/api/ee/vouchers/public-status/{inventory_id}/{voucher_code}',
 
     voucher_status: '/api/vouchers/public-status/{vendor_id}/{offer_id}',
     voucher: '/api/vouchers/{vendor_id}/{offer_id}/{voucher_code}',
