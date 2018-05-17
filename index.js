@@ -56,7 +56,7 @@ var definitions = {
     ee_hero_assignment: '/api/ee/hero_assignments/{region}{?platform}',
     ee_inventory_voucher: '/api/ee/vouchers/{inventory_id}/{voucher_code}',
     ee_inventory: '/api/ee/inventories/{inventory_id}',
-    ee_inventory_voucher_status: '/api/ee/vouchers/public-status/{inventory_id}/{voucher_code}',
+    ee_inventory_public_status: '/api/ee/inventories/public-status/{inventory_id}',
 
     voucher_status: '/api/vouchers/public-status/{vendor_id}/{offer_id}',
     voucher: '/api/vouchers/{vendor_id}/{offer_id}/{voucher_code}',
