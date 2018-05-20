@@ -23,7 +23,7 @@ var definitions = {
     tour_enquiry: '/api/tours/{tour_id}/tour-options/{id}/enquiry{?days,timezone_offset}',
     tour_reservation: '/api/tours/{tour_id}/tour-options/{tour_option_id}/reservations/{id}',
 
-    public_offers: '/api/public-offers{?page,limit,platform,region,brand}{&type*}',
+    public_offers: '/api/public-offers{?page,limit,platform,region,brand,locations}{&type*}',
     public_offer: '/api/public-offers/{id}{?platform,region,brand}',
 
     vendor: '/api/vendor/{id}',
