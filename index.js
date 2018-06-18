@@ -32,6 +32,7 @@ var definitions = {
 
     offers: '/api/offers{?page,limit,platform,region,filter,brand}{&type*}',
     offers_search: '/api/offers-search{?q}{&brand,limit}',
+    offers_content: '/api/offers-content{?brand}{&limit}',
     offer: '/api/offers/{id}{?platform,region,filter,brand}',
     offer_packages: '/api/offers/{offer_id}/packages',
     offer_package: '/api/offers/{offer_id}/packages/{id}',
