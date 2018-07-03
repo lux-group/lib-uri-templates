@@ -82,6 +82,7 @@ var definitions = {
 
     info: '/info',
     why_work_with_us: '/info/why-work-with-us',
+    about_us: '/info/about-us',
 
     faq: '/faq'
   },
