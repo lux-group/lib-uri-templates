@@ -40,7 +40,7 @@ describe('#mock', function() {
 
   describe('#expand', function() {
     it('should return the rfc6570', function() {
-      assert.equal(typeof template.expand, 'function');
+      assert.equal(typeof template.expand, 'string');
     });
   });
 });
