@@ -61,6 +61,9 @@ var definitions = {
     ee_inventory: '/api/ee/inventories/{inventory_id}',
     ee_inventory_public_status: '/api/ee/inventories/public-status/{inventory_id}',
 
+    ee_top_picks: '/api/ee/hero_assignments{?platform}',
+    ee_top_pick: '/api/ee/hero_assignments/{region}{?platform}',
+
     voucher_status: '/api/vouchers/public-status/{vendor_id}/{offer_id}',
     voucher: '/api/vouchers/{vendor_id}/{offer_id}/{voucher_code}',
 
