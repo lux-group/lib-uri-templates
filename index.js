@@ -84,7 +84,11 @@ var definitions = {
     why_work_with_us: '/info/why-work-with-us',
     about_us: '/info/about-us',
 
-    faq: '/faq'
+    faq: '/faq',
+
+    flight_single_cheapest: "/api/flights/single-cheapest-search?start_date={start_date}&" +
+      "end_date={end_date}&origin={origin}&" +
+      "destination={destination}&currency={currency}&number_of_adults={number_of_adults}"
   },
 };
 
