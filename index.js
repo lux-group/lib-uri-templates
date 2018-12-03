@@ -61,6 +61,12 @@ var definitions = {
     ee_inventory: '/api/ee/inventories/{inventory_id}',
     ee_inventory_public_status: '/api/ee/inventories/public-status/{inventory_id}',
 
+    ee_top_picks: '/api/ee/top-picks{?platform}',
+    ee_top_pick: '/api/ee/top-picks/{region}{?platform}',
+
+    ee_top_picks_heading: '/api/ee/top-picks-heading{?platform,region,page}',
+    ee_top_picks_headings: '/api/ee/top-picks-headings{?platform,region}',
+    
     voucher_status: '/api/vouchers/public-status/{vendor_id}/{offer_id}',
     voucher: '/api/vouchers/{vendor_id}/{offer_id}/{voucher_code}',
 
