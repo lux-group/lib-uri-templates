@@ -25,7 +25,7 @@ var definitions = {
 
     public_offer_filters: '/api/public-offer-filters{?brand,region,type,locations,holiday_types}',
     public_offers: '/api/public-offers{?page,limit,platform,region,brand,locations,holiday_types,exclude_offer_ids,slim}{&type*}',
-    public_offer: '/api/public-offers/{id}{?platform,region,brand}',
+    public_offer: '/api/public-offers/{id}{?platform,region,brand,allPackages}',
 
     vendor: '/api/vendor/{id}',
     vendor_offers: '/api/vendor-offers{?email}',
@@ -66,7 +66,7 @@ var definitions = {
 
     ee_top_picks_heading: '/api/ee/top-picks-heading{?platform,region,page}',
     ee_top_picks_headings: '/api/ee/top-picks-headings{?platform,region}',
-    
+
     voucher_status: '/api/vouchers/public-status/{vendor_id}/{offer_id}',
     voucher: '/api/vouchers/{vendor_id}/{offer_id}/{voucher_code}',
 
