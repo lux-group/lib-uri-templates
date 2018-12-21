@@ -25,7 +25,7 @@ var definitions = {
 
     public_offer_filters: '/api/public-offer-filters{?brand,region,type,locations,holiday_types}',
     public_offers: '/api/public-offers{?page,limit,platform,region,brand,locations,holiday_types,exclude_offer_ids,slim}{&type*}',
-    public_offer: '/api/public-offers/{id}{?platform,region,brand,allPackages}',
+    public_offer: '/api/public-offers/{id}{?platform,region,brand,all_packages}',
 
     vendor: '/api/vendor/{id}',
     vendor_offers: '/api/vendor-offers{?email}',
