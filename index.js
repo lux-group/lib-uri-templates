@@ -24,8 +24,8 @@ var definitions = {
     tour_reservation: '/api/tours/{tour_id}/tour-options/{tour_option_id}/reservations/{id}',
 
     public_offer_filters: '/api/public-offer-filters{?brand,region,type,locations,holiday_types}',
-    public_offers: '/api/public-offers{?page,limit,platform,region,brand,locations,holiday_types,exclude_offer_ids,slim}{&type*}',
-    public_offer: '/api/public-offers/{id}{?platform,region,brand,all_packages}',
+    public_offers: '/api/public-offers{?page,limit,platform,region,brand,locations,holiday_types,exclude_offer_ids,slim,flight_origin}{&type*}',
+    public_offer: '/api/public-offers/{id}{?platform,region,brand,all_packages,flight_origin}',
 
     vendor: '/api/vendor/{id}',
     vendor_offers: '/api/vendor-offers{?email}',
