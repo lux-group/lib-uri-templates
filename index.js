@@ -94,7 +94,8 @@ var definitions = {
       "destination={destination}&currency={currency}&number_of_adults={number_of_adults}",
       
     addons: "/api/offers/{offer_id}/packages/{package_id}/addons",
-    addon: "/api/offers/{offer_id}/packages/{package_id}/addons/{id}"
+    addon: "/api/offers/{offer_id}/packages/{package_id}/addons/{id}",
+    vendor_addons: "/vendor-addons/{vendor_id}"
   },
 };
 
