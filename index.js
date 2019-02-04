@@ -92,7 +92,9 @@ var definitions = {
     flight_single_cheapest: "/api/flights/single-cheapest-search?start_date={start_date}&" +
       "end_date={end_date}&origin={origin}&" +
       "destination={destination}&currency={currency}&number_of_adults={number_of_adults}",
-      
+
+    flight_fare_rules: "/api/flights/fare-rules?provider={provider}&carrier={carrier}&booking_class={booking_class}",
+
     addons: "/api/offers/{offer_id}/packages/{package_id}/addons",
     addon: "/api/offers/{offer_id}/packages/{package_id}/addons/{id}",
     vendor_addons: "/vendor-addons/{vendor_id}"
