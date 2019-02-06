@@ -97,7 +97,8 @@ var definitions = {
 
     addons: "/api/offers/{offer_id}/packages/{package_id}/addons",
     addon: "/api/offers/{offer_id}/packages/{package_id}/addons/{id}",
-    vendor_addons: "/vendor-addons/{vendor_id}"
+    vendor_addons: "/vendor-addons/{vendor_id}",
+    vendor_addon: "/vendor-addons/{vendor_id}/opportunities/{addon_id}"
   },
 };
 
