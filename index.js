@@ -70,6 +70,7 @@ var definitions = {
     voucher_status: '/api/vouchers/public-status/{vendor_id}/{offer_id}',
     voucher: '/api/vouchers/{vendor_id}/{offer_id}/{voucher_code}',
 
+    orders_addons: '/api/orders/addons/{addon_opportunity_id}',
     orders: '/api/orders{?page,per_page,order_by,order_direction,customer_id,vendor_id,utm_source,le_label,le_attribution,updated_since}',
     order: '/api/orders/{id}',
     payments: '/api/payments{?id_orders}',
