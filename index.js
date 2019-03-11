@@ -94,7 +94,7 @@ var definitions = {
       "end_date={end_date}&origin={origin}&" +
       "destination={destination}&currency={currency}&number_of_adults={number_of_adults}",
 
-    flight_fare_rules: "/api/flights/fare-rules?provider={provider}&carrier={carrier}&booking_class={booking_class}",
+    flight_fare_rules: "/api/flights/fare-rules{?journey_id,provider,carrier,booking_class}",
 
     addons: "/api/offers/{offer_id}/packages/{package_id}/addons",
     addon: "/api/offers/{offer_id}/packages/{package_id}/addons/{id}",
