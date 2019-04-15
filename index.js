@@ -90,9 +90,18 @@ var definitions = {
 
     faq: '/faq',
 
-    flight_single_cheapest: "/api/flights/single-cheapest-search?start_date={start_date}&" +
-      "end_date={end_date}&origin={origin}&" +
-      "destination={destination}&currency={currency}&number_of_adults={number_of_adults}",
+    flight_single_cheapest: `/api/flights/single-cheapest-search{?${
+      [
+        "start_date",
+        "end_date",
+        "origin",
+        "destination",
+        "currency",
+        "number_of_adults",
+        "number_of_nights",
+        "brand",
+        "provider*"
+      ].join(',')}}`,
 
     flight_fare_rules: "/api/flights/fare-rules{?journey_id,provider,carrier,booking_class}",
 
