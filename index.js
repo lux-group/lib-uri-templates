@@ -120,7 +120,8 @@ const definitions = {
       "number_of_adults",
       "number_of_children",
       "number_of_infants",
-      "number_of_packages"
+      "number_of_packages",
+      "provider*"
     )}`,
 
     calendar_days: `/api/calendar/days${query(
@@ -131,7 +132,8 @@ const definitions = {
       "number_of_adults",
       "number_of_children",
       "number_of_infants",
-      "number_of_packages"
+      "number_of_packages",
+      "provider*"
     )}`,
 
     flight_single_cheapest: `/api/flights/single-cheapest-search${query(
