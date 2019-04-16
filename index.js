@@ -36,8 +36,7 @@ const definitions = {
       "exclude_offer_ids",
       "slim",
       "flight_origin",
-      "type*",
-      "provider*"
+      "type*"
     )}`,
 
     public_offer: `/api/public-offers/{id}${query(
