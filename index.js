@@ -1,6 +1,6 @@
-var template = require('url-template');
+const template = require('url-template');
 
-var definitions = {
+const definitions = {
   1: {
     root: '/',
 
@@ -24,8 +24,29 @@ var definitions = {
     tour_reservation: '/api/tours/{tour_id}/tour-options/{tour_option_id}/reservations/{id}',
 
     public_offer_filters: '/api/public-offer-filters{?brand,region,type,locations,holiday_types}',
-    public_offers: '/api/public-offers{?page,limit,platform,region,brand,locations,holiday_types,exclude_offer_ids,slim,flight_origin}{&type*}',
-    public_offer: '/api/public-offers/{id}{?platform,region,brand,all_packages,flight_origin}',
+
+    public_offers: `/api/public-offers${query(
+      "page",
+      "limit",
+      "platform",
+      "region",
+      "brand",
+      "locations",
+      "holiday_types",
+      "exclude_offer_ids",
+      "slim",
+      "flight_origin",
+      "type*"
+    )}`,
+
+    public_offer: `/api/public-offers/{id}${query(
+      "platform",
+      "region",
+      "brand",
+      "all_packages",
+      "flight_origin",
+      "provider*"
+    )}`,
 
     vendor: '/api/vendor/{id}',
     vendor_offers: '/api/vendor-offers{?email}',
@@ -90,18 +111,41 @@ var definitions = {
 
     faq: '/faq',
 
-    flight_single_cheapest: `/api/flights/single-cheapest-search{?${
-      [
-        "start_date",
-        "end_date",
-        "origin",
-        "destination",
-        "currency",
-        "number_of_adults",
-        "number_of_nights",
-        "brand",
-        "provider*"
-      ].join(',')}}`,
+    calendar_months:`/api/calendar/months${query(
+      "offer_id",
+      "package_id",
+      "origin",
+      "region",
+      "number_of_adults",
+      "number_of_children",
+      "number_of_infants",
+      "number_of_packages",
+      "provider*"
+    )}`,
+
+    calendar_days: `/api/calendar/days${query(
+      "offer_id",
+      "package_id",
+      "origin",
+      "region",
+      "number_of_adults",
+      "number_of_children",
+      "number_of_infants",
+      "number_of_packages",
+      "provider*"
+    )}`,
+
+    flight_single_cheapest: `/api/flights/single-cheapest-search${query(
+      "start_date",
+      "end_date",
+      "origin",
+      "destination",
+      "currency",
+      "number_of_adults",
+      "number_of_nights",
+      "brand",
+      "provider*"
+    )}`,
 
     flight_fare_rules: "/api/flights/fare-rules{?journey_id,provider,carrier,booking_class}",
 
@@ -112,8 +156,12 @@ var definitions = {
   },
 };
 
+function query() {
+  return `{?${Array.prototype.slice.call(arguments).join(',')}}`
+}
+
 function build(version, rfc6570) {
-  var builder = template.parse(rfc6570);
+  const builder = template.parse(rfc6570);
 
   return {
     version: version,
@@ -125,7 +173,7 @@ function build(version, rfc6570) {
 }
 
 function get(version, name) {
-  var rfc6570 = definitions[version][name];
+  const rfc6570 = definitions[version][name];
   return build(version, rfc6570);
 }
 
