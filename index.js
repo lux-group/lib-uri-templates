@@ -1,4 +1,4 @@
-const template = require('url-template');
+const template = require('url-template')
 
 const definitions = {
   1: {
@@ -25,28 +25,28 @@ const definitions = {
 
     public_offer_filters: '/api/public-offer-filters{?brand,region,type,locations,holiday_types}',
 
-    public_offers: `/api/public-offers${query(
-      "page",
-      "limit",
-      "platform",
-      "region",
-      "brand",
-      "locations",
-      "holiday_types",
-      "exclude_offer_ids",
-      "slim",
-      "flight_origin",
-      "type*"
-    )}`,
+    public_offers: '/api/public-offers' + query(
+      'page',
+      'limit',
+      'platform',
+      'region',
+      'brand',
+      'locations',
+      'holiday_types',
+      'exclude_offer_ids',
+      'slim',
+      'flight_origin',
+      'type*'
+    ),
 
-    public_offer: `/api/public-offers/{id}${query(
-      "platform",
-      "region",
-      "brand",
-      "all_packages",
-      "flight_origin",
-      "provider*"
-    )}`,
+    public_offer: '/api/public-offers/{id}' + query(
+      'platform',
+      'region',
+      'brand',
+      'all_packages',
+      'flight_origin',
+      'provider*'
+    ),
 
     vendor: '/api/vendor/{id}',
     vendor_offers: '/api/vendor-offers{?email}',
@@ -111,88 +111,88 @@ const definitions = {
 
     faq: '/faq',
 
-    calendar_months:`/api/calendar/months${query(
-      "offer_id",
-      "package_id",
-      "origin",
-      "region",
-      "number_of_adults",
-      "number_of_children",
-      "number_of_infants",
-      "number_of_packages",
-      "provider*"
-    )}`,
+    calendar_months: '/api/calendar/months' + query(
+      'offer_id',
+      'package_id',
+      'origin',
+      'region',
+      'number_of_adults',
+      'number_of_children',
+      'number_of_infants',
+      'number_of_packages',
+      'provider*'
+    ),
 
-    calendar_days: `/api/calendar/days${query(
-      "offer_id",
-      "package_id",
-      "origin",
-      "region",
-      "number_of_adults",
-      "number_of_children",
-      "number_of_infants",
-      "number_of_packages",
-      "provider*"
-    )}`,
+    calendar_days: '/api/calendar/days' + query(
+      'offer_id',
+      'package_id',
+      'origin',
+      'region',
+      'number_of_adults',
+      'number_of_children',
+      'number_of_infants',
+      'number_of_packages',
+      'provider*'
+    ),
 
-    flight_single_cheapest: `/api/flights/single-cheapest-search${query(
-      "start_date",
-      "end_date",
-      "origin",
-      "destination",
-      "currency",
-      "number_of_adults",
-      "number_of_nights",
-      "brand",
-      "provider*"
-    )}`,
+    flight_single_cheapest: '/api/flights/single-cheapest-search' + query(
+      'start_date',
+      'end_date',
+      'origin',
+      'destination',
+      'currency',
+      'number_of_adults',
+      'number_of_nights',
+      'brand',
+      'provider*'
+    ),
 
-    flight_fare_rules: "/api/flights/fare-rules{?journey_id,provider,carrier,booking_class}",
+    flight_fare_rules: '/api/flights/fare-rules{?journey_id,provider,carrier,booking_class}',
 
-    addons: "/api/offers/{offer_id}/packages/{package_id}/addons",
-    addon: "/api/offers/{offer_id}/packages/{package_id}/addons/{id}",
-    vendor_addons: "/vendor-addons/{vendor_id}",
-    vendor_addon: "/vendor-addons/{vendor_id}/opportunities/{addon_id}"
+    addons: '/api/offers/{offer_id}/packages/{package_id}/addons',
+    addon: '/api/offers/{offer_id}/packages/{package_id}/addons/{id}',
+    vendor_addons: '/vendor-addons/{vendor_id}',
+    vendor_addon: '/vendor-addons/{vendor_id}/opportunities/{addon_id}',
   },
-};
+}
 
 function query() {
   return `{?${Array.prototype.slice.call(arguments).join(',')}}`
 }
 
 function build(version, rfc6570) {
-  const builder = template.parse(rfc6570);
+  const builder = template.parse(rfc6570)
 
   return {
     version: version,
     rfc6570: rfc6570,
-    expand: function (query) {
-      return builder.expand(query);
+    expand: function(query) {
+      return builder.expand(query)
     },
   }
 }
 
 function get(version, name) {
-  const rfc6570 = definitions[version][name];
-  return build(version, rfc6570);
+  const rfc6570 = definitions[version][name]
+  return build(version, rfc6570)
 }
 
 function mock(version, rfc6570) {
-  return build(version, rfc6570);
+  return build(version, rfc6570)
 }
 
 function list(version) {
-  return Object.keys(definitions[version]).reduce(function (acc, key) {
+  return Object.keys(definitions[version]).reduce(function(acc, key) {
     acc[key] = {
       href: get(version, key).rfc6570,
       templated: true,
     }
     return acc
-  }, {});
+  }, {})
 }
 
 module.exports = {
   get: get,
   mock: mock,
   list: list,
-};
+}
