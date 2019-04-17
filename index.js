@@ -157,7 +157,7 @@ const definitions = {
 }
 
 function query() {
-  return `{?${Array.prototype.slice.call(arguments).join(',')}}`
+  return '?' + Array.prototype.slice.call(arguments).join(',')
 }
 
 function build(version, rfc6570) {
