@@ -1,6 +1,6 @@
-const template = require('url-template')
+var template = require('url-template')
 
-const definitions = {
+var definitions = {
   1: {
     root: '/',
 
@@ -157,11 +157,11 @@ const definitions = {
 }
 
 function query() {
-  return '?' + Array.prototype.slice.call(arguments).join(',')
+  return  '{?' + Array.prototype.slice.call(arguments).join(',') + '}'
 }
 
 function build(version, rfc6570) {
-  const builder = template.parse(rfc6570)
+  var builder = template.parse(rfc6570)
 
   return {
     version: version,
@@ -173,7 +173,7 @@ function build(version, rfc6570) {
 }
 
 function get(version, name) {
-  const rfc6570 = definitions[version][name]
+  var rfc6570 = definitions[version][name]
   return build(version, rfc6570)
 }
 
