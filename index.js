@@ -120,7 +120,8 @@ var definitions = {
       'number_of_children',
       'number_of_infants',
       'number_of_packages',
-      'provider*'
+      'provider*',
+      'match_surcharge'
     ),
 
     calendar_days: '/api/calendar/days' + query(
@@ -132,7 +133,8 @@ var definitions = {
       'number_of_children',
       'number_of_infants',
       'number_of_packages',
-      'provider*'
+      'provider*',
+      'match_surcharge'
     ),
 
     flight_single_cheapest: '/api/flights/single-cheapest-search' + query(
