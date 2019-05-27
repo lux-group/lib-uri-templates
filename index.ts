@@ -10,12 +10,12 @@ interface ITemplate {
 }
 
 interface IListItem {
-  href: string;
-  templated: boolean;
+  readonly href: string;
+  readonly templated: boolean;
 }
 
 interface IDefinitions {
-  [propName: string]: any;
+  readonly [propName: string]: string;
 }
 
 const definitions: IDefinitions = {

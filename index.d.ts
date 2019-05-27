@@ -6,8 +6,8 @@ interface ITemplate {
     readonly expand: IExpandFunc;
 }
 interface IListItem {
-    href: string;
-    templated: boolean;
+    readonly href: string;
+    readonly templated: boolean;
 }
 export declare function get(name: string): ITemplate;
 export declare function mock(rfc6570: string): ITemplate;
