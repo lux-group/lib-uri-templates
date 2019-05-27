@@ -1,5 +1,5 @@
 interface IExpandFunc {
-    (query: string): string;
+    (query: any): string;
 }
 interface ITemplate {
     readonly rfc6570: string;

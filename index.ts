@@ -1,7 +1,7 @@
 import urlTemplate from "url-template";
 
 interface IExpandFunc {
-  (query: string): string;
+  (query: any): string;
 }
 
 interface ITemplate {
