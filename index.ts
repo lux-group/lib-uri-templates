@@ -138,6 +138,7 @@ const definitions: IDefinitions = {
     'number_of_infants',
     'number_of_packages',
     'provider*',
+    'min_date',
     'match_surcharge'
   ),
 
@@ -151,6 +152,7 @@ const definitions: IDefinitions = {
     'number_of_infants',
     'number_of_packages',
     'provider*',
+    'min_date',
     'match_surcharge'
   ),
 
