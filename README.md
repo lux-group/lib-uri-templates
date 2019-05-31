@@ -30,7 +30,7 @@ Use `npm` to patch, minor or whatever version:
 
 ```
 npm version patch -m "release version %s"
-git push && git push --tags
+npm publish --access public
 ```
 
 https://docs.npmjs.com/cli/version
