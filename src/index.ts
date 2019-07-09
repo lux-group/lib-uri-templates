@@ -59,6 +59,8 @@ const definitions: IDefinitions = {
       "exclude_offer_ids",
       "slim",
       "flight_origin",
+      "user_id",
+      "recommendation_id",
       "type*"
     ),
 
