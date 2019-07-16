@@ -61,6 +61,7 @@ const definitions: IDefinitions = {
       "flight_origin",
       "user_id",
       "recommendation_id",
+      "sort_by",
       "type*"
     ),
 
