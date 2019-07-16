@@ -1,6 +1,6 @@
 {
   "name": "@luxuryescapes/lib-uri-templates",
-  "version": "0.9.5",
+  "version": "0.9.6",
   "description": "All our routes in a repo for profit",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
