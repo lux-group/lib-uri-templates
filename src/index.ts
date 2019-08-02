@@ -57,6 +57,7 @@ const definitions: IDefinitions = {
       "locations",
       "holiday_types",
       "exclude_offer_ids",
+      "offer_ids",
       "slim",
       "flight_origin",
       "user_id",
