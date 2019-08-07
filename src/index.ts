@@ -196,7 +196,10 @@ const definitions: IDefinitions = {
   addon: "/api/offers/{offer_id}/packages/{package_id}/addons/{id}",
   addons: "/api/offers/{offer_id}/packages/{package_id}/addons",
   vendor_addon: "/vendor-addons/{vendor_id}/opportunities/{addon_id}",
-  vendor_addons: "/vendor-addons/{vendor_id}"
+  vendor_addons: "/vendor-addons/{vendor_id}",
+
+  partnership: "/api/loyalty/partnerships/{code}",
+  partnerships: "/api/loyalty/partnerships?{region,currency}"
 };
 
 function qargs(...parts: string[]) {
