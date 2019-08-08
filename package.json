@@ -1,6 +1,6 @@
 {
   "name": "@luxuryescapes/lib-uri-templates",
-  "version": "0.9.8",
+  "version": "0.9.9",
   "description": "All our routes in a repo for profit",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -16,6 +16,10 @@
     "postversion": "git push && git push --tags"
   },
   "license": "MIT",
+  "files": [
+    "lib",
+    "src"
+  ],
   "dependencies": {
     "url-template": "^2.0.8"
   },
