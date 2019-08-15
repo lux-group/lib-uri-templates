@@ -194,10 +194,7 @@ const definitions: IDefinitions = {
   flight_fare_rules:
     "/api/flights/fare-rules{?journey_id,provider,carrier,booking_class}",
 
-  flight_airports: "/api/flights/airports" + qargs(
-    "brand",
-    "region"
-  ),
+  flight_airports: "/api/flights/airports" + qargs("brand", "region"),
 
   addon: "/api/offers/{offer_id}/packages/{package_id}/addons/{id}",
   addons: "/api/offers/{offer_id}/packages/{package_id}/addons",
@@ -205,10 +202,7 @@ const definitions: IDefinitions = {
   vendor_addons: "/vendor-addons/{vendor_id}",
 
   partnership: "/api/loyalty/partnerships/{code}",
-  partnerships: "/api/loyalty/partnerships" + qargs(
-    "region",
-    "currency"
-  )
+  partnerships: "/api/loyalty/partnerships" + qargs("region", "currency")
 };
 
 function qargs(...parts: string[]) {
