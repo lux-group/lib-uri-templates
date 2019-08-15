@@ -187,7 +187,8 @@ const definitions: IDefinitions = {
       "number_of_adults",
       "number_of_nights",
       "brand",
-      "provider*"
+      "provider*",
+      "region"
     ),
 
   flight_fare_rules:
