@@ -1,6 +1,6 @@
 import urlTemplate from "url-template";
 
-type ExpandFunc = (query: object) => string;
+type ExpandFunc = (query?: object) => string;
 
 interface Template {
   readonly rfc6570: string;

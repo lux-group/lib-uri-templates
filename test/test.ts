@@ -25,6 +25,12 @@ describe("#get", function() {
 
     assert.equal(template.expand({ page: 1 }), "/api/public-offers?page=1");
   });
+
+  it("should expand the template with no query", function() {
+    const template = templates.get("wishlist");
+
+    assert.equal(template.expand(), "/api/wishlist");
+  });
 });
 
 describe("#mock", function() {
