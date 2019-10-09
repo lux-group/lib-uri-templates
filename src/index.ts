@@ -1,22 +1,30 @@
 import urlTemplate from "url-template";
 
-type IExpandFunc = (query: any) => string;
+type ExpandFunc = (query: object) => string;
 
-interface ITemplate {
+interface Template {
   readonly rfc6570: string;
-  readonly expand: IExpandFunc;
+  readonly expand: ExpandFunc;
 }
 
-interface IListItem {
+interface ListItem {
   readonly href: string;
   readonly templated: boolean;
 }
 
-interface IDefinitions {
-  readonly [propName: string]: string;
+interface ListItems {
+  [name: string]: ListItem;
 }
 
-const definitions: IDefinitions = {
+interface Definitions {
+  readonly [name: string]: string;
+}
+
+function qargs(...parts: string[]): string {
+  return `{?${parts.join(",")}}`;
+}
+
+const definitions: Definitions = {
   root: "/",
 
   hotel_enquiry:
@@ -204,32 +212,29 @@ const definitions: IDefinitions = {
 
   partnership: "/api/loyalty/partnerships/{code}",
   partnerships:
-    "/api/loyalty/partnerships" + qargs("brand", "region", "currency")
+    "/api/loyalty/partnerships" + qargs("brand", "region", "currency"),
+  wishlist: "/api/wishlist"
 };
 
-function qargs(...parts: string[]) {
-  return `{?${parts.join(",")}}`;
-}
-
-function build(rfc6570: string): ITemplate {
+function build(rfc6570: string): Template {
   const builder = urlTemplate.parse(rfc6570);
   return {
-    expand: query => builder.expand(query),
+    expand: (query): string => builder.expand(query),
     rfc6570
   };
 }
 
-export function get(name: string) {
+export function get(name: string): Template {
   const rfc6570 = definitions[name];
   return build(rfc6570);
 }
 
-export function mock(rfc6570: string): ITemplate {
+export function mock(rfc6570: string): Template {
   return build(rfc6570);
 }
 
-export function list(): IListItem[] {
-  return Object.keys(definitions).reduce((acc: any, key: string) => {
+export function list(): ListItems {
+  return Object.keys(definitions).reduce((acc: ListItems, key: string) => {
     acc[key] = {
       href: get(key).rfc6570,
       templated: true
