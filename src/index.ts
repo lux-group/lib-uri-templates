@@ -34,6 +34,7 @@ const definitions: Definitions = {
   properties: "/api/properties{?id_salesforce_external,limit,page}",
   property: "/api/properties/{id}",
   room_type: "/api/properties/{property_id}/room-types/{id}",
+  included_guests: "/api/properties/{property_id}/room-types/{id}/included-guests",
   room_type_availability:
     "/api/properties/{property_id}/room-types/{id}/availability",
   room_types: "/api/properties/{property_id}/room-types",
