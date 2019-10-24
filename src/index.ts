@@ -210,6 +210,7 @@ const definitions: Definitions = {
   addons: "/api/offers/{offer_id}/packages/{package_id}/addons",
   vendor_addon: "/vendor-addons/{vendor_id}/opportunities/{addon_id}",
   vendor_addons: "/vendor-addons/{vendor_id}",
+  all_addons: "/api/offers/addons/all/{?limit,page}",
 
   partnership: "/api/loyalty/partnerships/{code}",
   partnerships:
