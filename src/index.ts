@@ -145,7 +145,7 @@ const definitions: Definitions = {
   giftcard_terms_and_conditions: "/legal/giftcard-terms-and-conditions",
   how_we_calculate_percentage_off: "/legal/how-we-calculate-percentage-off",
   legal: "/legal",
-  regions: "/regions",
+  regions: "/regions{?brand}",
 
   about_us: "/info/about-us",
   info: "/info",
