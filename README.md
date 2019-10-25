@@ -22,13 +22,7 @@ template.rfc6570                              // '/api/properties{?id_salesforce
 template.expand({id_salesforce_external: 1})  // '/api/properties?id_salesforce_external=1
 ```
 
-## Release
-
-Use `npm` to patch, minor or whatever version:
-
-```
-npm version patch -m "release version %s"
-npm publish --access public
-```
-
-https://docs.npmjs.com/cli/version
+## publish
+1. Merge your branch
+2. Checkout master
+3. Run `yarn publish`
