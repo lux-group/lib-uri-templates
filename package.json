@@ -1,18 +1,17 @@
 {
   "name": "@luxuryescapes/lib-uri-templates",
-  "version": "0.9.11",
+  "version": "0.9.12",
   "description": "All our routes in a repo for profit",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
     "build": "tsc",
+    "test": "mocha -r ts-node/register test/**/*.ts",
     "lint": "eslint src test --ext .ts",
     "lint-fix": "yarn run lint --fix",
-    "prepare": "npm run build",
-    "prepublishOnly": "npm test && npm run lint",
-    "preversion": "npm run lint",
-    "test": "mocha -r ts-node/register test/**/*.ts",
-    "version": "npm run format && git add -A src",
+    "prepare": "yarn run build",
+    "prepublishOnly": "yarn test && yarn run lint",
+    "preversion": "yarn run lint",
     "postversion": "git push && git push --tags"
   },
   "license": "MIT",
