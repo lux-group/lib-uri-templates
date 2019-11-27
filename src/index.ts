@@ -216,6 +216,9 @@ const definitions: Definitions = {
   partnership: "/api/loyalty/partnerships/{code}",
   partnerships:
     "/api/loyalty/partnerships" + qargs("brand", "region", "currency"),
+  membership: "/api/loyalty/memberships/{code}",
+  memberships:
+    "/api/loyalty/memberships" + qargs("brand", "region", "currency"),
   wishlist: "/api/wishlist"
 };
 
