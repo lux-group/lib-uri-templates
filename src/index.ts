@@ -73,6 +73,7 @@ const definitions: Definitions = {
       "user_id",
       "recommendation_id",
       "sort_by",
+      "membership",
       "type*"
     ),
 
@@ -84,6 +85,8 @@ const definitions: Definitions = {
       "brand",
       "all_packages",
       "flight_origin",
+      "user_id",
+      "membership",
       "provider*"
     ),
 
