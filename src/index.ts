@@ -66,6 +66,7 @@ const definitions: Definitions = {
       "brand",
       "locations",
       "holiday_types",
+      "strategy_applied",
       "exclude_offer_ids",
       "offer_ids",
       "slim",
