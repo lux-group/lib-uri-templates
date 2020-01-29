@@ -75,6 +75,7 @@ const definitions: Definitions = {
       "recommendation_id",
       "sort_by",
       "membership",
+      "only_ids",
       "type*"
     ),
 
