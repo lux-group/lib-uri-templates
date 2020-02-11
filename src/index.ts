@@ -54,7 +54,7 @@ const definitions: Definitions = {
   tours: "/api/tours{?id_salesforce_external,limit,page}",
 
   public_offer_filters:
-    "/api/public-offer-filters{?brand,region,type,locations,holiday_types,campaigns,membership}",
+    "/api/public-offer-filters{?brand,region,type,locations,holiday_types,campaigns,memberships}",
 
   public_offers:
     "/api/public-offers" +
@@ -75,7 +75,7 @@ const definitions: Definitions = {
       "user_id",
       "recommendation_id",
       "sort_by",
-      "membership",
+      "memberships",
       "only_ids",
       "type*"
     ),
@@ -89,7 +89,7 @@ const definitions: Definitions = {
       "all_packages",
       "flight_origin",
       "user_id",
-      "membership",
+      "memberships",
       "provider*"
     ),
 
