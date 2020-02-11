@@ -55,7 +55,7 @@ const definitions: Definitions = {
 
   public_offer_filters:
     "/api/public-offer-filters{?brand,region,type,locations,holiday_types,campaigns,memberships}",
-  
+
   public_offers:
     "/api/public-offers" +
     qargs(
