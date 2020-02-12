@@ -54,7 +54,7 @@ const definitions: Definitions = {
   tours: "/api/tours{?id_salesforce_external,limit,page}",
 
   public_offer_filters:
-    "/api/public-offer-filters{?brand,region,type,locations,holiday_types,memberships}",
+    "/api/public-offer-filters{?brand,region,type,locations,holiday_types,campaigns,memberships}",
 
   public_offers:
     "/api/public-offers" +
@@ -66,6 +66,7 @@ const definitions: Definitions = {
       "brand",
       "locations",
       "holiday_types",
+      "campaigns",
       "strategy_applied",
       "exclude_offer_ids",
       "offer_ids",
