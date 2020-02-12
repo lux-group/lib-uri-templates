@@ -226,7 +226,9 @@ const definitions: Definitions = {
   membership: "/api/loyalty/memberships/{code}",
   memberships:
     "/api/loyalty/memberships" + qargs("brand", "region", "currency"),
-  wishlist: "/api/wishlist"
+  wishlist: "/api/wishlist",
+
+  current_user: "/api/users/current" + qargs("brand")
 };
 
 function build(rfc6570: string): Template {
