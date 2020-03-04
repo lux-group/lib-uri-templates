@@ -77,7 +77,8 @@ const definitions: Definitions = {
       "sort_by",
       "memberships",
       "only_ids",
-      "type*"
+      "type*",
+      "flexible_packages"
     ),
 
   public_offer:
@@ -90,7 +91,8 @@ const definitions: Definitions = {
       "flight_origin",
       "user_id",
       "memberships",
-      "provider*"
+      "provider*",
+      "flexible_packages"
     ),
 
   vendor: "/api/vendor/{id}",
