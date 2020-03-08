@@ -78,7 +78,8 @@ const definitions: Definitions = {
       "memberships",
       "only_ids",
       "type*",
-      "flexible_packages"
+      "flexible_packages",
+      "lowest_price_only",
     ),
 
   public_offer:
@@ -93,6 +94,14 @@ const definitions: Definitions = {
       "memberships",
       "provider*",
       "flexible_packages"
+    ),
+
+  public_offer_packages: 
+    "/api/public-offers/{offer_id}/packages" +
+    qargs(
+      "region",
+      "brand",
+      "all_packages"
     ),
 
   vendor: "/api/vendor/{id}",
