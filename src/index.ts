@@ -228,6 +228,9 @@ const definitions: Definitions = {
   membership: "/api/loyalty/memberships/{code}",
   memberships:
     "/api/loyalty/memberships" + qargs("brand", "region", "currency"),
+  memberships_limits:
+    "/api/loyalty/memberships/limits" +
+    qargs("brand", "customer_id", "membership_code"),
   wishlist: "/api/wishlist",
 
   current_user: "/api/users/current" + qargs("brand")
