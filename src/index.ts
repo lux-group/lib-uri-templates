@@ -140,6 +140,9 @@ const definitions: Definitions = {
   voucher: "/api/vouchers/{vendor_id}/{offer_id}/{voucher_code}",
   voucher_status: "/api/vouchers/public-status/{vendor_id}/{offer_id}",
 
+  users: "/api/users/{user_id}" + qargs("brand"),
+  user_memberships: "/api/users/{user_id}/memberships" + qargs("brand"),
+
   credits: "/api/credits{?id_member,currency}",
   order: "/api/orders/{id}",
   orders:
