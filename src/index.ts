@@ -79,7 +79,7 @@ const definitions: Definitions = {
       "only_ids",
       "type*",
       "flexible_packages",
-      "lowest_price_only",
+      "lowest_price_only"
     ),
 
   public_offer:
@@ -96,13 +96,9 @@ const definitions: Definitions = {
       "flexible_packages"
     ),
 
-  public_offer_packages: 
+  public_offer_packages:
     "/api/public-offers/{offer_id}/packages" +
-    qargs(
-      "region",
-      "brand",
-      "all_packages"
-    ),
+    qargs("region", "brand", "all_packages"),
 
   vendor: "/api/vendor/{id}",
   vendor_offers: "/api/vendor-offers{?email}",
@@ -242,7 +238,7 @@ const definitions: Definitions = {
     "/api/loyalty/memberships" + qargs("brand", "region", "currency"),
   memberships_limits:
     "/api/loyalty/memberships/limits" +
-    qargs("brand", "customer_id", "membership_code"),
+    qargs("brand", "customer_id", "membership_code", "membership_number"),
   wishlist: "/api/wishlist",
 
   current_user: "/api/users/current" + qargs("brand")
