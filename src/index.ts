@@ -49,6 +49,7 @@ const definitions: Definitions = {
   tour_legs: "/api/tours/{tour_id}/tour-legs",
   tour_option: "/api/tours/{tour_id}/tour-options/{id}",
   tour_option_dates: "/api/tours/{tour_id}/tour-options/{tour_option_id}/dates",
+  tour_option_date: "/api/tours/{tour_id}/tour-options/{tour_option_id}/dates/{id}",
   tour_options: "/api/tours/{tour_id}/tour-options",
   tour_reservation:
     "/api/tours/{tour_id}/tour-options/{tour_option_id}/reservations/{id}",
