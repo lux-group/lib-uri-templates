@@ -31,6 +31,8 @@ const definitions: Definitions = {
     "/api/properties/{property_id}/room-types/{id}/enquiry{?months,offset,nights,currency,timezone_offset,max_date}",
   hotel_reservation:
     "/api/properties/{property_id}/room-types/{room_type_id}/reservations/{id}",
+  hotel_reservation_history:
+    "/api/hotels/reservations/{item_id}/history{?limit,offset,page}",
   properties: "/api/properties{?id_salesforce_external,limit,page}",
   property: "/api/properties/{id}",
   room_type: "/api/properties/{property_id}/room-types/{id}",
@@ -49,10 +51,13 @@ const definitions: Definitions = {
   tour_legs: "/api/tours/{tour_id}/tour-legs",
   tour_option: "/api/tours/{tour_id}/tour-options/{id}",
   tour_option_dates: "/api/tours/{tour_id}/tour-options/{tour_option_id}/dates",
-  tour_option_date: "/api/tours/{tour_id}/tour-options/{tour_option_id}/dates/{id}",
+  tour_option_date:
+    "/api/tours/{tour_id}/tour-options/{tour_option_id}/dates/{id}",
   tour_options: "/api/tours/{tour_id}/tour-options",
   tour_reservation:
     "/api/tours/{tour_id}/tour-options/{tour_option_id}/reservations/{id}",
+  tour_reservation_history:
+    "/api/tours/reservations/{item_id}/history{?limit,offset,page}",
   tours: "/api/tours{?id_salesforce_external,limit,page}",
 
   public_offer_filters:
@@ -154,7 +159,20 @@ const definitions: Definitions = {
   credits: "/api/credits{?id_member,currency}",
   order: "/api/orders/{id}",
   orders:
-    "/api/orders{?page,per_page,order_by,order_direction,customer_id,vendor_id,utm_source,le_label,le_attribution,updated_since}",
+    "/api/orders" +
+    qargs(
+      "page",
+      "per_page",
+      "order_by",
+      "order_direction",
+      "customer_id",
+      "vendor_id",
+      "utm_source",
+      "le_label",
+      "le_attribution",
+      "updated_since",
+      "booking_numbers"
+    ),
   orders_addons: "/api/orders/addons/{addon_opportunity_id}",
   payments: "/api/payments{?id_orders}",
 
