@@ -15,7 +15,7 @@ export const room_types = "/api/properties/{property_id}/room-types";
 export const room_type = `${room_types}/{id}`;
 
 // Capacities
-export const room_type_capacities = `${room_types}/:room_type_id/capacities`;
+export const room_type_capacities = `${room_types}/{room_type_id}/capacities`;
 export const room_type_capacity = `${room_type_capacities}/{id}`;
 
 // Rate Plans
@@ -31,11 +31,11 @@ export const included_guests = `${room_type}/included-guests`;
 export const included_guest = `${included_guests}/{id}`;
 
 // Included Guests
-export const room_rate_included_guests = `${room_rates}/:room_rate_id/included-guests`;
+export const room_rate_included_guests = `${room_rates}/{room_rate_id}/included-guests`;
 export const room_rate_included_guest = `${room_rate_included_guests}/{id}`;
 
 // Surcharges
-export const room_rate_surcharge_dates = `${room_rates}/:room_rate_id/surcharge-dates`;
+export const room_rate_surcharge_dates = `${room_rates}/{room_rate_id}/surcharge-dates`;
 export const room_rate_surcharge_date = `${room_rate_surcharge_dates}/{id}`;
 
 export const room_type_availability =
