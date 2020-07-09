@@ -13,7 +13,8 @@ export const calendar_months =
     "number_of_packages",
     "provider*",
     "min_date",
-    "match_surcharge"
+    "match_surcharge",
+    "timezone_offset"
   );
 
 export const calendar_days =
@@ -30,5 +31,6 @@ export const calendar_days =
     "number_of_packages",
     "provider*",
     "min_date",
-    "match_surcharge"
+    "match_surcharge",
+    "timezone_offset"
   );
