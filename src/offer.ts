@@ -58,6 +58,8 @@ export const offer_package = "/api/offers/{offer_id}/packages/{id}";
 export const offer_packages = "/api/offers/{offer_id}/packages";
 export const offer_schedule = "/api/offers/{offer_id}/schedules/{id}";
 export const offer_schedules = "/api/offers/{offer_id}/schedules{?brand}";
+export const offer_schedule_logs =
+  "/api/offers/{offer_id}/schedule-logs{?brand,region,type}";
 export const offers =
   "/api/offers{?page,limit,platform,region,filter,brand}{&type*}";
 export const offers_content = "/api/offers-content{?brand}{&limit}";
