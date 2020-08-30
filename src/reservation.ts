@@ -14,10 +14,6 @@ export const property = "/api/properties/{id}";
 export const room_types = "/api/properties/{property_id}/room-types";
 export const room_type = `${room_types}/{id}`;
 
-// Capacities
-export const room_type_capacities = `${room_types}/{room_type_id}/capacities`;
-export const room_type_capacity = `${room_type_capacities}/{id}`;
-
 // Rate Plans
 export const rate_plans = "/api/rate-plans{?id_salesforce_external}";
 export const rate_plan = "/api/rate-plans{id}";
@@ -25,6 +21,14 @@ export const rate_plan = "/api/rate-plans{id}";
 // Room Rates
 export const room_rates = `${room_types}/{room_type_id}/room-rates`;
 export const room_rate = `${room_rates}/{id}`;
+
+// Legacy Capacities
+export const room_type_capacities = `${room_types}/{room_type_id}/capacities`;
+export const room_type_capacity = `${room_type_capacities}/{id}`;
+
+// Capacities
+export const room_rate_capacities = `${room_rates}/{room_rate_id}/capacities`;
+export const room_rate_capacity = `${room_rate_capacities}/{id}`;
 
 // Legacy Included Guests
 export const included_guests = `${room_type}/included-guests`;
