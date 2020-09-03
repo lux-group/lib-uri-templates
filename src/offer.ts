@@ -44,7 +44,7 @@ export const public_offer =
     "flexible_packages"
   );
 
-  export const public_bedbank_offer =
+export const public_bedbank_offer =
   "/api/public-offers/bedbank/{id}" +
   qargs(
     "platform",
@@ -60,6 +60,9 @@ export const public_offer =
 export const public_offer_packages =
   "/api/public-offers/{offer_id}/packages" +
   qargs("region", "brand", "all_packages");
+
+export const public_bedbank_offer_packages =
+  "/api/public-offers/bedbank/{offer_id}/packages" + qargs("region", "brand");
 
 export const vendor = "/api/vendor/{id}";
 export const vendor_offers = "/api/vendor-offers{?email}";
