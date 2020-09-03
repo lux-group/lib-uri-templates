@@ -53,6 +53,8 @@ export const public_offer =
     "user_id",
     "check_in",
     "check_out",
+    "number_of_adults",
+    "children_ages" //number of children determined by the number of ages we get
   );
 
 export const public_offer_packages =
