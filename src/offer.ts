@@ -27,8 +27,7 @@ export const public_offers =
     "only_ids",
     "type*",
     "flexible_packages",
-    "lowest_price_only",
-    "feed_enabled"
+    "lowest_price_only"
   );
 
 export const public_offer =
