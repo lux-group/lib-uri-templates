@@ -44,25 +44,27 @@ export const public_offer =
     "flexible_packages"
   );
 
-export const public_bedbank_offer =
+export const public_offer_packages =
+  "/api/public-offers/{offer_id}/packages" +
+  qargs("region", "brand", "all_packages");
+
+// Duplicating and camelCasing to avoid breaking changes
+export const publicBedbankOfferPackages =
+  "/api/public-offers/bedbank/{offerId}/packages" + qargs("region", "brand");
+
+// Duplicating and camelCasing to avoid breaking changes
+export const publicBedbankOffer =
   "/api/public-offers/bedbank/{id}" +
   qargs(
     "platform",
     "region",
     "brand",
-    "user_id",
-    "check_in",
-    "check_out",
-    "number_of_adults",
-    "children_ages"
+    "userId",
+    "checkIn",
+    "checkOut",
+    "numberOfAdults",
+    "childrenAges"
   );
-
-export const public_offer_packages =
-  "/api/public-offers/{offer_id}/packages" +
-  qargs("region", "brand", "all_packages");
-
-export const public_bedbank_offer_packages =
-  "/api/public-offers/bedbank/{offer_id}/packages" + qargs("region", "brand");
 
 export const vendor = "/api/vendor/{id}";
 export const vendor_offers = "/api/vendor-offers{?email}";
@@ -89,3 +91,26 @@ export const vendor_addons = "/vendor-addons/{vendor_id}";
 export const all_addons = "/api/offers/addons/all/{?limit,page}";
 
 export const wishlist = "/api/wishlist";
+
+/**
+ * Move deprecated templates to the bottom
+ * so we can remove them on a mayor release
+ **/
+
+// Todo: Remove this on a mayor release
+export const public_bedbank_offer =
+  "/api/public-offers/bedbank/{id}" +
+  qargs(
+    "platform",
+    "region",
+    "brand",
+    "user_id",
+    "check_in",
+    "check_out",
+    "number_of_adults",
+    "children_ages"
+  );
+
+// Todo: Remove this on a mayor release
+export const public_bedbank_offer_packages =
+  "/api/public-offers/bedbank/{offer_id}/packages" + qargs("region", "brand");
