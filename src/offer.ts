@@ -61,8 +61,7 @@ export const publicOffer =
     "userId",
     "checkIn",
     "checkOut",
-    "numberOfAdults",
-    "childrenAges",
+    "occupancy",
     "offerType"
   );
 
