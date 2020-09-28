@@ -65,6 +65,21 @@ export const publicOffer =
     "offerType"
   );
 
+export const publicOfferV2 =
+  "/api/v2/public-offers/{id}" +
+  qargs(
+    "platform",
+    "region",
+    "brand",
+    "userId",
+    "checkIn",
+    "checkOut",
+    "occupancy"
+  );
+
+export const publicOfferPackagesV2 =
+  "/api/v2/public-offers/{offerId}/packages" + qargs("region", "brand");
+
 export const vendor = "/api/vendor/{id}";
 export const vendor_offers = "/api/vendor-offers{?email}";
 
