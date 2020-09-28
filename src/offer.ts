@@ -48,11 +48,12 @@ export const public_offer_packages =
   "/api/public-offers/{offer_id}/packages" +
   qargs("region", "brand", "all_packages");
 
-export const publicBedbankOfferPackagesV2 =
-  "/api/v2/public-offers/bedbank/{offerId}/packages" + qargs("region", "brand");
+export const publicOfferPackages =
+  "/api/v2/public-offers/{offerId}/packages" +
+  qargs("region", "brand", "offerType");
 
-export const publicBedbankOfferV2 =
-  "/api/v2/public-offers/bedbank/{id}" +
+export const publicOffer =
+  "/api/v2/public-offers/{id}" +
   qargs(
     "platform",
     "region",
@@ -61,7 +62,8 @@ export const publicBedbankOfferV2 =
     "checkIn",
     "checkOut",
     "numberOfAdults",
-    "childrenAges"
+    "childrenAges",
+    "offerType"
   );
 
 export const vendor = "/api/vendor/{id}";
