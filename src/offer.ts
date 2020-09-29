@@ -61,7 +61,7 @@ export const publicOffer =
     "userId",
     "checkIn",
     "checkOut",
-    "occupancy",
+    "occupancy*",
     "offerType"
   );
 
@@ -106,7 +106,7 @@ export const public_bedbank_offer =
     "user_id",
     "check_in",
     "check_out",
-    "occupancy"
+    "occupancy*"
   );
 
 // Todo: Remove this on a mayor release
@@ -127,5 +127,5 @@ export const publicBedbankOffer =
     "userId",
     "checkIn",
     "checkOut",
-    "occupancy"
+    "occupancy*"
   );
