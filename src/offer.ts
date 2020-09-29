@@ -121,8 +121,7 @@ export const public_bedbank_offer =
     "user_id",
     "check_in",
     "check_out",
-    "number_of_adults",
-    "children_ages"
+    "occupancy"
   );
 
 // Todo: Remove this on a mayor release
@@ -143,6 +142,5 @@ export const publicBedbankOffer =
     "userId",
     "checkIn",
     "checkOut",
-    "numberOfAdults",
-    "childrenAges"
+    "occupancy"
   );
