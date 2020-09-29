@@ -48,13 +48,12 @@ export const public_offer_packages =
   "/api/public-offers/{offer_id}/packages" +
   qargs("region", "brand", "all_packages");
 
-// Duplicating and camelCasing to avoid breaking changes
-export const publicBedbankOfferPackages =
-  "/api/public-offers/bedbank/{offerId}/packages" + qargs("region", "brand");
+export const publicOfferPackages =
+  "/api/v2/public-offers/{offerId}/packages" +
+  qargs("region", "brand", "offerType");
 
-// Duplicating and camelCasing to avoid breaking changes
-export const publicBedbankOffer =
-  "/api/public-offers/bedbank/{id}" +
+export const publicOffer =
+  "/api/v2/public-offers/{id}" +
   qargs(
     "platform",
     "region",
@@ -63,7 +62,8 @@ export const publicBedbankOffer =
     "checkIn",
     "checkOut",
     "numberOfAdults",
-    "childrenAges"
+    "childrenAges",
+    "offerType"
   );
 
 export const vendor = "/api/vendor/{id}";
@@ -114,3 +114,21 @@ export const public_bedbank_offer =
 // Todo: Remove this on a mayor release
 export const public_bedbank_offer_packages =
   "/api/public-offers/bedbank/{offer_id}/packages" + qargs("region", "brand");
+
+// Todo: Remove this on a mayor release
+export const publicBedbankOfferPackages =
+  "/api/public-offers/bedbank/{offerId}/packages" + qargs("region", "brand");
+
+// Todo: Remove this on a mayor release
+export const publicBedbankOffer =
+  "/api/public-offers/bedbank/{id}" +
+  qargs(
+    "platform",
+    "region",
+    "brand",
+    "userId",
+    "checkIn",
+    "checkOut",
+    "numberOfAdults",
+    "childrenAges"
+  );
