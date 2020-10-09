@@ -81,21 +81,3 @@ export const vendor_addons = "/vendor-addons/{vendor_id}";
 export const all_addons = "/api/offers/addons/all/{?limit,page}";
 
 export const wishlist = "/api/wishlist";
-
-/**
- * Move deprecated templates to the bottom
- * so we can remove them on a mayor release
- **/
-
-// Todo: Remove this on a mayor release
-export const public_bedbank_offer =
-  "/api/public-offers/bedbank/{id}" +
-  qargs(
-    "platform",
-    "region",
-    "brand",
-    "user_id",
-    "check_in",
-    "check_out",
-    "occupancy*"
-  );
