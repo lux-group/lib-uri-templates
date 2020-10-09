@@ -11,7 +11,7 @@ import * as content from "./content";
 import * as payment from "./payment";
 import * as voucher from "./voucher";
 
-type ExpandFunc = (query?: object) => string;
+type ExpandFunc = (query?: object) => string; // eslint-disable-line
 
 interface Template {
   readonly rfc6570: string;
@@ -42,14 +42,14 @@ const definitions: Definitions = {
   ...auth,
   ...content,
   ...payment,
-  ...voucher
+  ...voucher,
 };
 
 function build(rfc6570: string): Template {
   const builder = urlTemplate.parse(rfc6570);
   return {
     expand: (query): string => builder.expand(query),
-    rfc6570
+    rfc6570,
   };
 }
 
@@ -66,7 +66,7 @@ export function list(): ListItems {
   return Object.keys(definitions).reduce((acc: ListItems, key: string) => {
     acc[key] = {
       href: get(key).rfc6570,
-      templated: true
+      templated: true,
     };
     return acc;
   }, {});
