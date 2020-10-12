@@ -2,6 +2,7 @@ import urlTemplate from "url-template";
 
 import * as order from "./order";
 import * as reservation from "./reservation";
+import * as bedbank from "./bedbank";
 import * as offer from "./offer";
 import * as calendar from "./calendar";
 import * as flight from "./flight";
@@ -35,6 +36,7 @@ const definitions: Definitions = {
   root: "/",
   ...order,
   ...reservation,
+  ...bedbank,
   ...offer,
   ...calendar,
   ...flight,
@@ -42,14 +44,14 @@ const definitions: Definitions = {
   ...auth,
   ...content,
   ...payment,
-  ...voucher,
+  ...voucher
 };
 
 function build(rfc6570: string): Template {
   const builder = urlTemplate.parse(rfc6570);
   return {
     expand: (query): string => builder.expand(query),
-    rfc6570,
+    rfc6570
   };
 }
 
@@ -66,7 +68,7 @@ export function list(): ListItems {
   return Object.keys(definitions).reduce((acc: ListItems, key: string) => {
     acc[key] = {
       href: get(key).rfc6570,
-      templated: true,
+      templated: true
     };
     return acc;
   }, {});
