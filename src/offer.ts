@@ -27,7 +27,12 @@ export const public_offers =
     "only_ids",
     "type*",
     "flexible_packages",
-    "lowest_price_only"
+    "lowest_price_only",
+    "include_package_ids",
+    "check_in",
+    "check_out",
+    "place_ids",
+    "occupancy"
   );
 
 export const public_offer =
