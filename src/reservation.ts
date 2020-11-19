@@ -30,6 +30,10 @@ export const room_type_capacity = `${room_type_capacities}/{id}`;
 export const room_rate_capacities = `${room_rates}/{room_rate_id}/capacities`;
 export const room_rate_capacity = `${room_rate_capacities}/{id}`;
 
+// Extra guest surcharges
+export const extra_guest_surcharges = `${room_rates}/{room_rate_id}/extra-guest-surcharges`;
+export const extra_guest_surcharge = `${extra_guest_surcharges}/{id}`;
+
 // Legacy Included Guests
 export const included_guests = `${room_type}/included-guests`;
 export const included_guest = `${included_guests}/{id}`;
