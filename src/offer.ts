@@ -32,7 +32,8 @@ export const public_offers =
     "check_in",
     "check_out",
     "place_ids",
-    "occupancy"
+    "occupancy",
+    "personalisation"
   );
 
 export const public_offer =
