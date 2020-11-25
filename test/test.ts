@@ -1,8 +1,8 @@
 import assert from "assert";
 import * as templates from "../src";
 
-describe("#get", function() {
-  it("should return the rfc6570", function() {
+describe("#get", function () {
+  it("should return the rfc6570", function () {
     const template = templates.get("properties");
 
     assert.equal(
@@ -11,7 +11,7 @@ describe("#get", function() {
     );
   });
 
-  it("should expand the template", function() {
+  it("should expand the template", function () {
     const template = templates.get("properties");
 
     assert.equal(
@@ -20,21 +20,21 @@ describe("#get", function() {
     );
   });
 
-  it("should expand the template (query fn builder)", function() {
+  it("should expand the template (query fn builder)", function () {
     const template = templates.get("public_offers");
 
     assert.equal(template.expand({ page: 1 }), "/api/public-offers?page=1");
   });
 
-  it("should expand the template with no query", function() {
+  it("should expand the template with no query", function () {
     const template = templates.get("wishlist");
 
     assert.equal(template.expand(), "/api/wishlist");
   });
 });
 
-describe("#mock", function() {
-  it("should return the rfc6570", function() {
+describe("#mock", function () {
+  it("should return the rfc6570", function () {
     const template = templates.mock(
       "/api/properties{?id_salesforce_external,limit,page}"
     );

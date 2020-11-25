@@ -19,7 +19,7 @@ jobs:
             - ~/.cache/yarn
             - ./node_modules
 
-      - run: yarn test
+      - run: yarn ci
 
 experimental:
   notify:
