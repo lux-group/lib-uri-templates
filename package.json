@@ -6,6 +6,7 @@
   "types": "lib/index.d.ts",
   "scripts": {
     "build": "tsc",
+    "ci": "yarn test && yarn lint && tsc",
     "test": "mocha -r ts-node/register test/**/*.ts",
     "lint": "eslint src test --ext .ts",
     "lint:fix": "yarn run lint --fix",
