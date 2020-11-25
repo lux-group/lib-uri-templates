@@ -33,7 +33,8 @@ export const public_offers =
     "check_out",
     "place_ids",
     "occupancy",
-    "personalisation"
+    "personalisation",
+    "remove_addons"
   );
 
 export const public_offer =
@@ -47,12 +48,13 @@ export const public_offer =
     "user_id",
     "memberships",
     "provider*",
-    "flexible_packages"
+    "flexible_packages",
+    "remove_addons"
   );
 
 export const public_offer_packages =
   "/api/public-offers/{offer_id}/packages" +
-  qargs("region", "brand", "all_packages");
+  qargs("region", "brand", "all_packages", "remove_addons");
 
 export const publicOfferPackages =
   "/api/v2/public-offers/{offerId}/packages" +
