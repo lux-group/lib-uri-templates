@@ -35,7 +35,8 @@ export const public_offers =
     "occupancy",
     "personalisation",
     "remove_addons",
-    "exclude_properties"
+    "exclude_properties",
+    "flexible_as_rates"
   );
 
 export const public_offer =
@@ -51,7 +52,8 @@ export const public_offer =
     "provider*",
     "flexible_packages",
     "remove_addons",
-    "exclude_properties"
+    "exclude_properties",
+    "flexible_as_rates"
   );
 
 export const public_offer_packages =
@@ -61,7 +63,8 @@ export const public_offer_packages =
     "brand",
     "all_packages",
     "remove_addons",
-    "exclude_properties"
+    "exclude_properties",
+    "flexible_as_rates"
   );
 
 export const publicOfferPackages =
