@@ -69,7 +69,15 @@ export const public_offer_packages =
 
 export const publicOfferPackages =
   "/api/v2/public-offers/{offerId}/packages" +
-  qargs("brand", "checkIn", "checkOut", "occupancy*", "offerType", "region");
+  qargs(
+    "brand",
+    "checkIn",
+    "checkOut",
+    "occupancy*",
+    "offerType",
+    "region",
+    "medium"
+  );
 
 export const publicOffer =
   "/api/v2/public-offers/{id}" +
