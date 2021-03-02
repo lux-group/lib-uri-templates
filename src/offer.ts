@@ -1,7 +1,7 @@
 import qargs from "./qargs";
 
 export const public_offer_filters =
-  "/api/public-offer-filters{?brand,region,type,locations,holiday_types,benefit_types,campaigns,memberships,check_in,check_out,occupancy,place_ids}";
+  "/api/public-offer-filters{?brand,region,type,locations,holiday_types,benefit_types,campaigns,memberships,check_in,check_out,occupancy,place_ids,property_ids}";
 
 export const public_offers =
   "/api/public-offers" +
@@ -32,6 +32,7 @@ export const public_offers =
     "check_in",
     "check_out",
     "place_ids",
+    "property_ids",
     "occupancy",
     "personalisation",
     "remove_addons",
@@ -97,7 +98,15 @@ export const publicOffers =
 
 export const publicOfferList =
   "/api/v2/public-offers/list" +
-  qargs("placeIds", "occupancy", "checkIn", "checkOut", "region", "offerType");
+  qargs(
+    "placeIds",
+    "propertyIds",
+    "occupancy",
+    "checkIn",
+    "checkOut",
+    "region",
+    "offerType"
+  );
 
 export const vendor = "/api/vendor/{id}";
 export const vendor_offers = "/api/vendor-offers{?email}";
