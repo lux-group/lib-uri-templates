@@ -44,14 +44,14 @@ const definitions: Definitions = {
   ...auth,
   ...content,
   ...payment,
-  ...voucher,
+  ...voucher
 };
 
 function build(rfc6570: string): Template {
   const builder = urlTemplate.parse(rfc6570);
   return {
     expand: (query): string => builder.expand(query),
-    rfc6570,
+    rfc6570
   };
 }
 
@@ -68,7 +68,7 @@ export function list(): ListItems {
   return Object.keys(definitions).reduce((acc: ListItems, key: string) => {
     acc[key] = {
       href: get(key).rfc6570,
-      templated: true,
+      templated: true
     };
     return acc;
   }, {});
