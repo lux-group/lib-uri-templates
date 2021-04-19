@@ -93,6 +93,7 @@ export const publicOffers =
     "checkOut",
     "region",
     "brand",
+    "medium",
     "offerType"
   );
 
