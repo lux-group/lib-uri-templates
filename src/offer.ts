@@ -105,6 +105,7 @@ export const publicOfferList =
     "checkIn",
     "checkOut",
     "region",
+    "medium",
     "offerType"
   );
 
