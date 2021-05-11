@@ -98,25 +98,11 @@ export const publicOffers =
 
 export const publicOfferList =
   "/api/v2/public-offers/list" +
-  qargs(
-    "placeIds",
-    "occupancy",
-    "checkIn",
-    "checkOut",
-    "region",
-    "offerType"
-  );
+  qargs("placeIds", "occupancy", "checkIn", "checkOut", "region", "offerType");
 
 export const publicOfferListByProperty =
   "/api/v2/public-offers/list/property/{propertyId}" +
-  qargs(
-    "occupancy",
-    "checkIn",
-    "checkOut",
-    "region",
-    "brand",
-    "searchNearby"
-  );
+  qargs("occupancy", "checkIn", "checkOut", "region", "brand", "searchNearby");
 
 export const vendor = "/api/vendor/{id}";
 export const vendor_offers = "/api/vendor-offers{?email}";
