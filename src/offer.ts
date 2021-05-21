@@ -75,14 +75,13 @@ export const publicOfferPackages =
     "checkIn",
     "checkOut",
     "occupancy*",
-    "offerType",
     "region",
     "medium"
   );
 
 export const publicOffer =
   "/api/v2/public-offers/{id}" +
-  qargs("platform", "region", "brand", "userId", "offerType");
+  qargs("platform", "region", "brand", "userId");
 
 export const publicOffers =
   "/api/v2/public-offers" +
@@ -92,13 +91,12 @@ export const publicOffers =
     "checkIn",
     "checkOut",
     "region",
-    "brand",
-    "offerType"
+    "brand"
   );
 
 export const publicOfferList =
   "/api/v2/public-offers/list" +
-  qargs("placeIds", "occupancy", "checkIn", "checkOut", "region", "offerType");
+  qargs("placeIds", "occupancy", "checkIn", "checkOut", "region");
 
 export const publicOfferListByProperty =
   "/api/v2/public-offers/list/property/{propertyId}" +
