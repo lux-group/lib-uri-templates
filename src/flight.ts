@@ -16,7 +16,7 @@ export const flight_single_cheapest =
   );
 
 export const flight_fare_rules =
-  "/api/flights/fare-rules{?journey_id,provider,carrier,booking_class}";
+  "/api/flights/fare-rules{?journey_id,provider,carrier,booking_class,fare_rule_type}";
 
 export const flight_airports =
   "/api/flights/airports" + qargs("brand", "region", "latitude", "longitude");
