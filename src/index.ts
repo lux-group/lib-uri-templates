@@ -14,8 +14,8 @@ import * as voucher from "./voucher";
 
 type ExpandFunc = (query?: object) => string; // eslint-disable-line
 
-interface Template {
-  readonly rfc6570: string;
+interface Template<Def extends string = string> {
+  readonly rfc6570: Def;
   readonly expand: ExpandFunc;
 }
 
@@ -47,7 +47,7 @@ const definitions: Definitions = {
   ...voucher,
 };
 
-function build(rfc6570: string): Template {
+function build<Def extends string = string>(rfc6570: Def): Template<Def> {
   const builder = urlTemplate.parse(rfc6570);
   return {
     expand: (query): string => builder.expand(query),
@@ -60,7 +60,7 @@ export function get(name: string): Template {
   return build(rfc6570);
 }
 
-export function mock(rfc6570: string): Template {
+export function mock<Def extends string>(rfc6570: Def): Template<Def> {
   return build(rfc6570);
 }
 
@@ -76,14 +76,14 @@ export function list(): ListItems {
 
 function buildAll<Defs extends Definitions>(
   definitions: Defs
-): { [name in keyof Defs]: Template } {
+): { [name in keyof Defs]: Template<Defs[name]> } {
   const templates = Object.keys(definitions).reduce<{
     [key: string]: Template;
   }>((templates, name) => {
     templates[name] = build(definitions[name]);
     return templates;
   }, {});
-  return templates as { [name in keyof Defs]: Template };
+  return templates as { [name in keyof Defs]: Template<Defs[name]> };
 }
 
 export const templates = {
