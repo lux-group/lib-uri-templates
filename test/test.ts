@@ -1,47 +1,70 @@
 import assert from "assert";
-import * as templates from "../src";
+import * as uriTemplates from "../src";
 
 describe("#get", function () {
   it("should return the rfc6570", function () {
-    const template = templates.get("properties");
+    const template = uriTemplates.get("properties");
 
-    assert.equal(
+    assert.strictEqual(
       template.rfc6570,
       "/api/properties{?id_salesforce_external,limit,page}"
     );
   });
 
   it("should expand the template", function () {
-    const template = templates.get("properties");
+    const template = uriTemplates.get("properties");
 
-    assert.equal(
+    assert.strictEqual(
       template.expand({ id_salesforce_external: 1 }),
       "/api/properties?id_salesforce_external=1"
     );
   });
 
   it("should expand the template (query fn builder)", function () {
-    const template = templates.get("public_offers");
+    const template = uriTemplates.get("public_offers");
 
-    assert.equal(template.expand({ page: 1 }), "/api/public-offers?page=1");
+    assert.strictEqual(
+      template.expand({ page: 1 }),
+      "/api/public-offers?page=1"
+    );
   });
 
   it("should expand the template with no query", function () {
-    const template = templates.get("wishlist");
+    const template = uriTemplates.get("wishlist");
 
-    assert.equal(template.expand(), "/api/wishlist");
+    assert.strictEqual(template.expand(), "/api/wishlist");
   });
 });
 
 describe("#mock", function () {
   it("should return the rfc6570", function () {
-    const template = templates.mock(
+    const template = uriTemplates.mock(
       "/api/properties{?id_salesforce_external,limit,page}"
     );
 
-    assert.equal(
+    assert.strictEqual(
       template.rfc6570,
       "/api/properties{?id_salesforce_external,limit,page}"
+    );
+  });
+});
+
+describe("#templates", function () {
+  it("should return the rfc6570", function () {
+    const template = uriTemplates.templates.reservation.properties;
+
+    assert.strictEqual(
+      template.rfc6570,
+      "/api/properties{?id_salesforce_external,limit,page}"
+    );
+  });
+
+  it("should expand the template", function () {
+    const template = uriTemplates.templates.reservation.properties;
+
+    assert.strictEqual(
+      template.expand({ id_salesforce_external: 1 }),
+      "/api/properties?id_salesforce_external=1"
     );
   });
 });

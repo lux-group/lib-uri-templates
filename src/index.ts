@@ -73,3 +73,30 @@ export function list(): ListItems {
     return acc;
   }, {});
 }
+
+function buildAll<Defs extends Definitions>(
+  definitions: Defs
+): { [name in keyof Defs]: Template } {
+  const templates = Object.keys(definitions).reduce<{
+    [key: string]: Template;
+  }>((templates, name) => {
+    templates[name] = build(definitions[name]);
+    return templates;
+  }, {});
+  return templates as { [name in keyof Defs]: Template };
+}
+
+export const templates = {
+  root: build("/"),
+  order: buildAll(order),
+  reservation: buildAll(reservation),
+  bedbank: buildAll(bedbank),
+  offer: buildAll(offer),
+  calendar: buildAll(calendar),
+  flight: buildAll(flight),
+  loyalty: buildAll(loyalty),
+  auth: buildAll(auth),
+  content: buildAll(content),
+  payment: buildAll(payment),
+  voucher: buildAll(voucher),
+};
