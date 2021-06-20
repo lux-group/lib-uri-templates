@@ -1,4 +1,5 @@
 import urlTemplate from "url-template";
+import { URIParams } from "uri-template-param-types";
 
 import * as order from "./order";
 import * as reservation from "./reservation";
@@ -12,11 +13,11 @@ import * as content from "./content";
 import * as payment from "./payment";
 import * as voucher from "./voucher";
 
-type ExpandFunc = (query?: object) => string; // eslint-disable-line
+type ExpandFunc<Def extends string> = (query?: URIParams<Def>) => string;
 
 interface Template<Def extends string = string> {
   readonly rfc6570: Def;
-  readonly expand: ExpandFunc;
+  readonly expand: ExpandFunc<Def>;
 }
 
 interface ListItem {
