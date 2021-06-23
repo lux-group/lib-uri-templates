@@ -5,8 +5,10 @@
 Published templates:
 
 ```js
-const templates = require('lib-uri-templates');
-const template = templates.get('properties');
+const uri = require('lib-uri-templates');
+const template = uri.templates.reservation.properties;
+// Or legacy API:
+// const template = uri.get('properties');
 
 template.rfc6570                              // '/api/properties{?id_salesforce_external,limit,page}'
 template.expand({id_salesforce_external: 1})  // '/api/properties?id_salesforce_external=1
@@ -15,8 +17,8 @@ template.expand({id_salesforce_external: 1})  // '/api/properties?id_salesforce_
 Development templates:
 
 ```js
-const templates = require('lib-uri-templates');
-const template = templates.mock('/api/properties{?id_salesforce_external,limit,page}')
+const uri = require('lib-uri-templates');
+const template = uri.mock('/api/properties{?id_salesforce_external,limit,page}')
 
 template.rfc6570                              // '/api/properties{?id_salesforce_external,limit,page}'
 template.expand({id_salesforce_external: 1})  // '/api/properties?id_salesforce_external=1
