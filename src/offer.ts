@@ -20,7 +20,7 @@ export const publicOffers =
   "/api/v2/public-offers{?offerIds,occupancy,checkIn,checkOut,region,brand}";
 
 export const publicOfferList =
-  "/api/v2/public-offers/list{?placeIds,occupancy,checkIn,checkOut,region,offerType}";
+  "/api/v2/public-offers/list{?placeIds,occupancy,checkIn,checkOut,region,offerType,brand}";
 
 export const publicOfferListByProperty =
   "/api/v2/public-offers/list/property/{propertyId}{?occupancy,checkIn,checkOut,region,brand,searchNearby}";
