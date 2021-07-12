@@ -1,6 +1,6 @@
 {
   "name": "@luxuryescapes/lib-uri-templates",
-  "version": "1.6.1",
+  "version": "1.6.2",
   "description": "All our routes in a repo for profit",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -22,7 +22,7 @@
   ],
   "dependencies": {
     "url-template": "^2.0.8",
-    "uri-template-param-types": "^0.2.0"
+    "uri-template-param-types": "^0.3.0"
   },
   "devDependencies": {
     "@types/assert": "^1.5.2",
