@@ -1,5 +1,5 @@
 import urlTemplate from "url-template";
-import { URIParams } from "uri-template-param-types";
+import { PermissiveURIParams } from "uri-template-param-types";
 
 import * as order from "./order";
 import * as reservation from "./reservation";
@@ -13,7 +13,9 @@ import * as content from "./content";
 import * as payment from "./payment";
 import * as voucher from "./voucher";
 
-type ExpandFunc<Def extends string> = (query?: URIParams<Def>) => string;
+type ExpandFunc<Def extends string> = (
+  query?: PermissiveURIParams<Def>
+) => string;
 
 interface Template<Def extends string = string> {
   readonly rfc6570: Def;
