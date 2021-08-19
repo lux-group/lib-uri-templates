@@ -28,7 +28,8 @@ export const publicOfferListByProperty =
 export const vendor = "/api/vendor/{id}";
 export const vendor_offers = "/api/vendor-offers{?email}";
 
-export const offer = "/api/offers/{id}{?platform,region,filter,brand}";
+export const offer =
+  "/api/offers/{id}{?platform,region,filter,brand,remove_addons}";
 export const offer_image = "/api/offers/{offer_id}/images/{id}";
 export const offer_images = "/api/offers/{offer_id}/images";
 export const offer_package = "/api/offers/{offer_id}/packages/{id}";
@@ -38,7 +39,7 @@ export const offer_schedules = "/api/offers/{offer_id}/schedules{?brand}";
 export const offer_schedule_logs =
   "/api/offers/{offer_id}/schedule-logs{?brand,region,type}";
 export const offers =
-  "/api/offers{?page,limit,platform,region,filter,brand}{&type*}";
+  "/api/offers{?page,limit,platform,region,filter,brand,remove_addons}{&type*}";
 export const offers_content = "/api/offers-content{?brand}{&limit}";
 export const offers_search = "/api/offers-search{?q}{&brand,limit}";
 
