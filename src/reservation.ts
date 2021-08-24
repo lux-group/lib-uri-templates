@@ -48,6 +48,8 @@ export const room_rate_surcharge_date = `${room_rate_surcharge_dates}/{id}` as c
 
 export const room_type_availability =
   "/api/properties/{property_id}/room-types/{id}/availability";
+export const room_rate_availability =
+  "/api/properties/{property_id}/room-types/{room_type_id}/room-rates/{room_rate_id}/availability";
 export const amenities = "/api/amenities";
 export const tour = "/api/tours/{id}";
 export const tour_enquiry =
