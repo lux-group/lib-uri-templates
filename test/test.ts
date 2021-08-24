@@ -55,7 +55,7 @@ describe("#templates", function () {
 
     assert.strictEqual(
       template.rfc6570,
-      "/api/offers{?page,limit,platform,region,filter,brand}{&type*}"
+      "/api/offers{?page,limit,platform,region,filter,brand,remove_addons}{&type*}"
     );
   });
 
