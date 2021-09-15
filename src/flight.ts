@@ -6,3 +6,6 @@ export const flight_fare_rules =
 
 export const flight_airports =
   "/api/flights/airports{?brand,region,latitude,longitude}";
+
+export const flight_check_property_block_list =
+  "/api/flights/checkPropertyBlockList{?propertyIds,region,brand}";
