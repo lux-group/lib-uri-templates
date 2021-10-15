@@ -20,6 +20,34 @@ describe("#get", function () {
     );
   });
 
+  it("should expand the publicOffer template", function () {
+    const template = uri.get("publicOffer");
+
+    assert.strictEqual(
+      template.expand({
+        id: 1,
+        region: "AU",
+        brand: "luxuryescapes",
+        flightOrigin: "SYD",
+      }),
+      "/api/v2/public-offers/1?region=AU&brand=luxuryescapes&flightOrigin=SYD"
+    );
+  });
+
+  it("should expand the publicOffers template", function () {
+    const template = uri.get("publicOffers");
+
+    assert.strictEqual(
+      template.expand({
+        offerIds: [1, 2, 3],
+        region: "AU",
+        brand: "luxuryescapes",
+        flightOrigin: "SYD",
+      }),
+      "/api/v2/public-offers?offerIds=1,2,3&region=AU&brand=luxuryescapes&flightOrigin=SYD"
+    );
+  });
+
   it("should expand the template (query fn builder)", function () {
     const template = uri.get("public_offers");
 
