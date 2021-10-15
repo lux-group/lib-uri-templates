@@ -14,10 +14,10 @@ export const publicOfferPackages =
   "/api/v2/public-offers/{offerId}/packages{?brand,checkIn,checkOut,occupancy*,region,medium}";
 
 export const publicOffer =
-  "/api/v2/public-offers/{id}{?platform,region,brand,userId}";
+  "/api/v2/public-offers/{id}{?platform,region,brand,userId,flightOrigin}";
 
 export const publicOffers =
-  "/api/v2/public-offers{?offerIds,occupancy,checkIn,checkOut,region,brand}";
+  "/api/v2/public-offers{?offerIds,occupancy,checkIn,checkOut,region,brand,flightOrigin}";
 
 export const publicOfferList =
   "/api/v2/public-offers/list{?placeIds,occupancy,checkIn,checkOut,region,offerType,brand}";
