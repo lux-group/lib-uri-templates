@@ -11,7 +11,7 @@ export const public_offer_packages =
   "/api/public-offers/{offer_id}/packages{?region,brand,all_packages,remove_addons,exclude_properties,flexible_as_rates}";
 
 export const publicOfferPackages =
-  "/api/v2/public-offers/{offerId}/packages{?brand,salesEnv,checkIn,checkOut,occupancy*,region,medium}";
+  "/api/v2/public-offers/{offerId}/packages{?brand,salesEnv*,checkIn,checkOut,occupancy*,region,medium}";
 
 export const publicOffer =
   "/api/v2/public-offers/{id}{?platform,region,brand,flightOrigin}";
