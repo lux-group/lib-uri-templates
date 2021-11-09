@@ -20,10 +20,10 @@ export const publicOffers =
   "/api/v2/public-offers{?offerIds,occupancy,checkIn,checkOut,region,brand,flightOrigin}";
 
 export const publicOfferList =
-  "/api/v2/public-offers/list{?placeIds,occupancy,checkIn,checkOut,region,offerType,brand}";
+  "/api/v2/public-offers/list{?placeIds,occupancy,checkIn,checkOut,region,offerType,brand,sortBy}";
 
 export const publicOfferListByProperty =
-  "/api/v2/public-offers/list/property/{propertyId}{?occupancy,checkIn,checkOut,region,brand,searchNearby}";
+  "/api/v2/public-offers/list/property/{propertyId}{?occupancy,checkIn,checkOut,region,brand,searchNearby,sortBy}";
 
 export const vendor = "/api/vendor/{id}";
 export const vendor_offers = "/api/vendor-offers{?email}";
