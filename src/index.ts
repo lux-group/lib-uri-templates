@@ -104,4 +104,5 @@ export const templates = {
   content: buildAll(content),
   payment: buildAll(payment),
   voucher: buildAll(voucher),
+  search: buildAll(search),
 };
