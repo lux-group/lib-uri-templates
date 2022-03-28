@@ -5,7 +5,7 @@ export const how_we_calculate_percentage_off =
 export const legal = "/legal";
 export const regions = "/regions{?brand,no_detect}";
 export const priority_phone_numbers =
-  "/priority_phone_numbers{?brand,no_detect}";
+  "/priority-phone-numbers{?brand,no_detect}";
 
 export const about_us = "/info/about-us";
 export const info = "/info";
