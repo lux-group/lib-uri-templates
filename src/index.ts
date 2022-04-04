@@ -13,6 +13,7 @@ import * as content from "./content";
 import * as payment from "./payment";
 import * as voucher from "./voucher";
 import * as search from "./search";
+import * as tour from "./tour";
 
 type ExpandFunc<Def extends string> = (
   query?: PermissiveURIParams<Def>
@@ -50,6 +51,7 @@ const definitions: Definitions = {
   ...payment,
   ...voucher,
   ...search,
+  ...tour,
 };
 
 function build<Def extends string = string>(rfc6570: Def): Template<Def> {
