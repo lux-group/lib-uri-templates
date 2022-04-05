@@ -107,4 +107,5 @@ export const templates = {
   payment: buildAll(payment),
   voucher: buildAll(voucher),
   search: buildAll(search),
+  tour: buildAll(tour),
 };
