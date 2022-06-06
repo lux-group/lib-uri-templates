@@ -17,7 +17,7 @@ export const publicOffer =
   "/api/v2/public-offers/{id}{?platform,region,brand,flightOrigin}";
 
 export const publicOffers =
-  "/api/v2/public-offers{?offerIds,occupancy,checkIn,checkOut,region,brand,flightOrigin}";
+  "/api/v2/public-offers{?offerIds,occupancy,checkIn,checkOut,region,brand,flightOrigin,clientTime}";
 
 export const publicOfferList =
   "/api/v2/public-offers/list{?placeIds,occupancy,checkIn,checkOut,region,offerType,brand,sortBy,campaigns,holidayTypes,locations,strategyApplied,bounds,cancellationPolicies,amenities}";
