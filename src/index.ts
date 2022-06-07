@@ -14,7 +14,7 @@ import * as payment from "./payment";
 import * as voucher from "./voucher";
 import * as search from "./search";
 import * as tour from "./tour";
-
+import * as referral from "./referral";
 type ExpandFunc<Def extends string> = (
   query?: PermissiveURIParams<Def>
 ) => string;
@@ -52,6 +52,7 @@ const definitions: Definitions = {
   ...voucher,
   ...search,
   ...tour,
+  ...referral
 };
 
 function build<Def extends string = string>(rfc6570: Def): Template<Def> {
@@ -108,4 +109,5 @@ export const templates = {
   voucher: buildAll(voucher),
   search: buildAll(search),
   tour: buildAll(tour),
+  referral: buildAll(referral)
 };
