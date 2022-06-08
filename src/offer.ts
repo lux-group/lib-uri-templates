@@ -1,5 +1,5 @@
 export const public_offer_filters =
-  "/api/public-offer-filters{?brand,region,type,locations,holiday_types,benefit_types,campaigns,memberships,check_in,check_out,occupancy,place_ids,property_ids,offer_ids,property_types}";
+  "/api/public-offer-filters{?brand,region,type,locations,holiday_types,benefit_types,campaigns,memberships,check_in,check_out,occupancy,place_ids,property_ids,offer_ids,property_types,hash}";
 
 export const public_offers =
   "/api/public-offers{?page,limit,platform,region,brand,locations,holiday_types,campaigns,benefit_types,strategy_applied,exclude_offer_ids,offer_ids,slim,flight_origin,sort_by,memberships,only_ids,type*,flexible_packages,lowest_price_only,include_package_ids,check_in,check_out,place_ids,property_ids,occupancy,personalisation,remove_addons,exclude_properties,flexible_as_rates}";
@@ -24,6 +24,9 @@ export const publicOfferList =
 
 export const publicOfferListByProperty =
   "/api/v2/public-offers/list/property/{propertyId}{?occupancy,checkIn,checkOut,region,brand,searchNearby,sortBy}";
+
+export const publicOfferTraderInformation =
+  "/api/v2/public-offers/{propertyId}/trader-information{?region,brand}";
 
 export const vendor = "/api/vendor/{id}";
 export const vendor_offers = "/api/vendor-offers{?email}";
