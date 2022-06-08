@@ -25,6 +25,9 @@ export const publicOfferList =
 export const publicOfferListByProperty =
   "/api/v2/public-offers/list/property/{propertyId}{?occupancy,checkIn,checkOut,region,brand,searchNearby,sortBy}";
 
+export const publicOfferTraderInformation =
+  "/api/v2/public-offers/{propertyId}/trader-information{?region,brand}";
+
 export const vendor = "/api/vendor/{id}";
 export const vendor_offers = "/api/vendor-offers{?email}";
 
