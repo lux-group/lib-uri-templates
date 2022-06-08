@@ -52,7 +52,7 @@ const definitions: Definitions = {
   ...voucher,
   ...search,
   ...tour,
-  ...referral
+  ...referral,
 };
 
 function build<Def extends string = string>(rfc6570: Def): Template<Def> {
@@ -109,5 +109,5 @@ export const templates = {
   voucher: buildAll(voucher),
   search: buildAll(search),
   tour: buildAll(tour),
-  referral: buildAll(referral)
+  referral: buildAll(referral),
 };
