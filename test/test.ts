@@ -34,6 +34,20 @@ describe("#get", function () {
     );
   });
 
+  it("should expand the publicOfferExtra template", function () {
+    const template = uri.get("publicOfferExtra");
+
+    assert.strictEqual(
+      template.expand({
+        id: 1,
+        region: "AU",
+        brand: "luxuryescapes",
+        clientTime: "10:00:00",
+      }),
+      "/api/v2/public-offers/1/extra?region=AU&brand=luxuryescapes&clientTime=10%3A00%3A00"
+    );
+  });
+
   it("should expand the publicOffers template", function () {
     const template = uri.get("publicOffers");
 
