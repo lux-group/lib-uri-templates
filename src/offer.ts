@@ -16,6 +16,9 @@ export const publicOfferPackages =
 export const publicOffer =
   "/api/v2/public-offers/{id}{?platform,region,brand,flightOrigin}";
 
+export const publicOfferExtra =
+  "/api/v2/public-offers/{id}/extra{?region,brand,clientTime}";
+
 export const publicOffers =
   "/api/v2/public-offers{?offerIds,occupancy,checkIn,checkOut,region,brand,flightOrigin,clientTime}";
 
