@@ -5,4 +5,4 @@ export const search_popular_places =
   "/api/search/popular-places{?region,brand,limit}";
 
 export const search_top_selling_places =
-  "/api/search/top-selling-places{?region,brand,country,state,limit}";
+  "/api/search/place/v1/top-selling{?region,brand,country,state,limit}";
