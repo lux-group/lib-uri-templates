@@ -1,8 +1,8 @@
 export const search_trending_places =
-  "/api/search/trending-places{?region,brand,limit}";
+  "/api/search/hotel/v1/places/trending{?region,brand,limit}";
 
 export const search_popular_places =
   "/api/search/popular-places{?region,brand,limit}";
 
 export const search_top_selling_places =
-  "/api/search/place/v1/top-selling{?region,brand,country,state,limit}";
+  "/api/search/hotel/v1/places/top-selling{?region,brand,country,state,limit}";
