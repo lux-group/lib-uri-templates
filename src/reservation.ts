@@ -53,7 +53,7 @@ export const room_rate_availability =
 export const amenities = "/api/amenities";
 export const tour = "/api/tours/{id}";
 export const tour_enquiry =
-  "/api/tours/{tour_id}/tour-options/{id}/enquiry{?days,timezone_offset}";
+  "/api/tours/{tour_id}/tour-options/{id}/enquiry{?days,timezone_offset,no_of_adults}";
 export const tour_leg = "/api/tours/{tour_id}/tour-legs/{id}";
 export const tour_legs = "/api/tours/{tour_id}/tour-legs";
 export const tour_option = "/api/tours/{tour_id}/tour-options/{id}";
