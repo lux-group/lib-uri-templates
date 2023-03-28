@@ -113,4 +113,19 @@ describe("#templates", function () {
       "/api/offers?region=AU&brand=luxuryescapes&type=hotel&type=tour"
     );
   });
+  it("calendar template test", function () {
+    const template = uri.templates.calendar.availability;
+
+    assert.strictEqual(
+      template.expand({
+        offerIds: "0062y000007opDEAAY",
+        region: "AU",
+        checkIn: "2023-04-21",
+        checkOut: "2023-04-24",
+        brand: "luxuryescapes",
+        occupancy: [1, 2, 3],
+      }),
+      "/api/v2/calendar/availability?offerIds=0062y000007opDEAAY&region=AU&checkIn=2023-04-21&checkOut=2023-04-24&occupancy=1&occupancy=2&occupancy=3&brand=luxuryescapes"
+    );
+  });
 });
