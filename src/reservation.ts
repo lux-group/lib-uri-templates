@@ -67,3 +67,5 @@ export const tour_reservation =
 export const tour_reservation_history =
   "/api/tours/reservations/{item_id}/history{?limit,offset,page}";
 export const tours = "/api/tours{?id_salesforce_external,limit,page}";
+export const inclusions_categories =
+  "/api/reservations/inclusions-catalogue/categories";
