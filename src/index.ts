@@ -6,6 +6,7 @@ import * as reservation from "./reservation";
 import * as bedbank from "./bedbank";
 import * as offer from "./offer";
 import * as calendar from "./calendar";
+import * as carHire from "./car-hire";
 import * as flight from "./flight";
 import * as loyalty from "./loyalty";
 import * as auth from "./auth";
@@ -44,6 +45,7 @@ const definitions: Definitions = {
   ...bedbank,
   ...offer,
   ...calendar,
+  ...carHire,
   ...flight,
   ...loyalty,
   ...auth,
@@ -101,6 +103,7 @@ export const templates = {
   bedbank: buildAll(bedbank),
   offer: buildAll(offer),
   calendar: buildAll(calendar),
+  carHire: buildAll(carHire),
   flight: buildAll(flight),
   loyalty: buildAll(loyalty),
   auth: buildAll(auth),
