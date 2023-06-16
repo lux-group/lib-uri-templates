@@ -128,4 +128,22 @@ describe("#templates", function () {
       "/api/v2/calendar/availability?offerIds=0062y000007opDEAAY&region=AU&checkIn=2023-04-21&checkOut=2023-04-24&occupancy=1&occupancy=2&occupancy=3&brand=luxuryescapes"
     );
   });
+  it("search list template test", function () {
+    const template = uri.templates.search.list;
+
+    assert.strictEqual(
+      template.expand({
+        offerType: "bedbank_hotel",
+        searchType: "destination",
+        placeIds: "le_d41d8cd98f00b204e9800998ecf8427e",
+        distanceEq: 0,
+        region: "AU",
+        occupancy: 3,
+        hasPromotions: true,
+        showUnavailableResult: true,
+        brand: "luxuryescapes",
+      }),
+      "/api/search/hotel/v1/list?offerType=bedbank_hotel&searchType=destination&placeIds=le_d41d8cd98f00b204e9800998ecf8427e&distanceEq=0&region=AU&occupancy=3&hasPromotions=true&showUnavailableResult=true&brand=luxuryescapes"
+    );
+  });
 });
