@@ -12,7 +12,6 @@ import * as loyalty from "./loyalty";
 import * as auth from "./auth";
 import * as content from "./content";
 import * as payment from "./payment";
-import * as voucher from "./voucher";
 import * as search from "./search";
 import * as tour from "./tour";
 import * as referral from "./referral";
@@ -51,7 +50,6 @@ const definitions: Definitions = {
   ...auth,
   ...content,
   ...payment,
-  ...voucher,
   ...search,
   ...tour,
   ...referral,
@@ -109,7 +107,6 @@ export const templates = {
   auth: buildAll(auth),
   content: buildAll(content),
   payment: buildAll(payment),
-  voucher: buildAll(voucher),
   search: buildAll(search),
   tour: buildAll(tour),
   referral: buildAll(referral),
