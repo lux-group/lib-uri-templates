@@ -146,4 +146,23 @@ describe("#templates", function () {
       "/api/search/hotel/v1/list?offerType=bedbank_hotel&searchType=destination&placeIds=le_d41d8cd98f00b204e9800998ecf8427e&distanceEq=0&region=AU&occupancy=3&hasPromotions=true&showUnavailableResult=true&brand=luxuryescapes"
     );
   });
+  describe("#external", function () {
+    it("external url path test", function () {
+      const template = uri.templates.externalUrl.offer_listing_url;
+
+      assert.strictEqual(
+        template.rfc6570,
+        "/offer/{slug}/{id_salesforce_external}"
+      );
+    });
+
+    it("should expand the template", function () {
+      const template = uri.templates.externalUrl.offer_listing_url;
+    
+      assert.strictEqual(
+        template.expand({ slug: "test", id_salesforce_external: 1 }),
+        "/offer/test/1"
+      );
+    });
+  });
 });
