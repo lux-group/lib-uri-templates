@@ -158,7 +158,7 @@ describe("#templates", function () {
 
     it("should expand the template", function () {
       const template = uri.templates.externalUrl.offer_listing_url;
-    
+
       assert.strictEqual(
         template.expand({ slug: "test", id_salesforce_external: 1 }),
         "/offer/test/1"
