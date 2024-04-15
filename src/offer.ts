@@ -32,7 +32,6 @@ export const publicOfferTraderInformation =
   "/api/v2/public-offers/{propertyId}/trader-information{?region,brand}";
 
 export const vendor = "/api/vendor/{id}";
-export const vendor_offers = "/api/vendor-offers{?email}";
 
 export const offer =
   "/api/offers/{id}{?platform,region,filter,brand,remove_addons}";
