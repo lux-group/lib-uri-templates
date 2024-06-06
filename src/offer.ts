@@ -22,9 +22,6 @@ export const publicOfferExtra =
 export const publicOffers =
   "/api/v2/public-offers{?offerIds,occupancy,checkIn,checkOut,region,brand,currency,flightOrigin,preview}";
 
-export const publicOfferList =
-  "/api/v2/public-offers/list{?placeIds,occupancy,checkIn,checkOut,region,offerType,brand,sortBy,campaigns,holidayTypes,locations,strategyApplied,bounds,amenities,ignoreVisibility}";
-
 export const publicOfferListByProperty =
   "/api/v2/public-offers/list/property/{propertyId}{?occupancy,checkIn,checkOut,region,brand,searchNearby,sortBy}";
 
