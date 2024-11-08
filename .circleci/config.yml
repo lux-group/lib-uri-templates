@@ -1,4 +1,6 @@
 version: 2
+context: &context
+  context: LE
 jobs:
   build:
     docker:
