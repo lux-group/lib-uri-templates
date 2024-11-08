@@ -21,6 +21,8 @@ jobs:
 
       - run: yarn ci
 
+      - run: yarn publish
+
 experimental:
   notify:
     branches:
