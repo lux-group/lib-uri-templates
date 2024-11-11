@@ -8,4 +8,4 @@ export const search_top_selling_places =
   "/api/search/hotel/v1/places/top-selling{?region,brand,country,state,limit}";
 
 export const list =
-  "/api/search/hotel/v1/list{?offerType,searchType,placeIds,distanceEq,region,occupancy,hasPromotions,showUnavailableResult,brand}";
+  "/api/search/hotel/v1/list{?offerType,searchType,placeIds,distanceEq,region,occupancy,hasPromotions,showUnavailableResult,brand,limit,debug,next,bedrooms,bedroomsGte,bedroomsEq,bedsGte,checkIn,checkOut,nearby,searchNearby}";
