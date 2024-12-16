@@ -11,16 +11,16 @@ export const public_offer_packages =
   "/api/public-offers/{offer_id}/packages{?region,brand,all_packages,remove_addons,exclude_properties,flexible_as_rates}";
 
 export const publicOfferPackages =
-  "/api/v2/public-offers/{offerId}/packages{?brand,flightOrigin,checkIn,checkOut,occupancy*,region,medium,preview}";
+  "/api/v2/public-offers/{offerId}/packages{?brand,flightOrigin,checkIn,checkOut,occupancy*,region,medium,preview,source}";
 
 export const publicOffer =
-  "/api/v2/public-offers/{id}{?platform,region,brand,currency,flightOrigin,preview}";
+  "/api/v2/public-offers/{id}{?platform,region,brand,currency,flightOrigin,preview,source}";
 
 export const publicOfferExtra =
   "/api/v2/public-offers/{id}/extra{?region,brand,clientTime}";
 
 export const publicOffers =
-  "/api/v2/public-offers{?offerIds,occupancy,checkIn,checkOut,region,brand,currency,flightOrigin,preview}";
+  "/api/v2/public-offers{?offerIds,occupancy,checkIn,checkOut,region,brand,currency,flightOrigin,preview,source}";
 
 export const publicOfferListByProperty =
   "/api/v2/public-offers/list/property/{propertyId}{?occupancy,checkIn,checkOut,region,brand,searchNearby,sortBy}";
