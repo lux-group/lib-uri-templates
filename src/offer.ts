@@ -53,3 +53,6 @@ export const vendor_addons = "/vendor-addons/{vendor_id}";
 export const all_addons = "/api/offers/addons/all/{?limit,page}";
 
 export const wishlist = "/api/wishlist";
+
+export const publicOfferRetrieveId =
+  "/api/v2/public-offers/retrieve/id{?slug,type,brand}";
