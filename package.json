@@ -1,6 +1,6 @@
 {
   "name": "@luxuryescapes/lib-uri-templates",
-  "version": "3.0.9",
+  "version": "3.0.10",
   "description": "All our routes in a repo for profit",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
@@ -15,7 +15,7 @@
     "preversion": "yarn run lint",
     "postversion": "git push && git push --tags"
   },
-  "license": "MIT",
+  "license": "UNLICENSED",
   "files": [
     "lib",
     "src"
