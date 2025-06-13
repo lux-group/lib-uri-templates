@@ -16,6 +16,7 @@ import * as search from "./search";
 import * as tour from "./tour";
 import * as referral from "./referral";
 import * as affiliate from "./affiliate";
+import * as merchandise from "./merchandise";
 
 type ExpandFunc<Def extends string> = (
   query?: PermissiveURIParams<Def>
@@ -56,6 +57,7 @@ const definitions: Definitions = {
   ...tour,
   ...referral,
   ...affiliate,
+  ...merchandise,
 };
 
 function build<Def extends string = string>(rfc6570: Def): Template<Def> {
@@ -114,4 +116,5 @@ export const templates = {
   tour: buildAll(tour),
   referral: buildAll(referral),
   affiliate: buildAll(affiliate),
+  merchandise: buildAll(merchandise),
 };
